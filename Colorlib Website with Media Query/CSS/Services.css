@@ -1,0 +1,211 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'poppins';
+    text-decoration: none;
+    list-style-type: none;
+}
+body{
+    background-color: #f8f8f8;
+}
+.main{
+    width: 100%;
+}
+nav{
+    width: 67%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+nav i{
+    position: relative;
+    padding: 10px 10px 10px 30px;
+}
+nav ul{
+    position: absolute;
+    right: 0px;
+    width: 180px;
+    margin-top: 8px;
+    background-color: white;
+    font-weight: 700;
+    padding: 22px 0px 0px 22px;
+    display: none;
+    box-shadow: 0px 0px 8px 2px rgb(237, 237, 237);
+}
+nav ul li{
+    padding-bottom: 22px;
+}
+nav ul li a{
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.7);
+}
+nav i:hover ul{
+    display: block;
+}
+header{
+    width: 68%;
+    margin: 150px auto;
+    text-align: center;
+}
+header h5{
+    color: #00000066;
+    font-weight: 700;
+    font-size: 14px;
+}
+header a{
+    color: #00000066;
+}
+header a:hover{
+    color: #d5c455;
+    transition: all 0.2s;
+}
+header h1{
+    font-size: 40px;
+    margin-top: 10px;
+}
+header .course-row{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+header .course-row .course-name{
+    width: 300px;
+    height: 350px;
+    padding: 30px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px 1px rgb(236, 236, 236);
+    background-color: white;
+}
+header .course-row .course-name svg{
+    height: 70px;
+    width: 70px;
+}
+header .course-row .course-name svg path{
+    fill: #d5c455;
+}
+header .course-row .course-name h3{
+    margin: 10px;
+    font-size: 20px;
+}
+header .course-row .course-name p{
+    color: #999999;
+    font-size: 16px;
+    margin-top: 15px;
+    line-height: 28px;
+}
+.course-row .course-name:hover{
+    background-color: #d5c455;
+    transition: all 0.3s;
+}
+.course-row .course-name:hover path,h3{
+    fill: white;
+}
+.course-row .course-name:hover h3{
+    color: white;
+}
+.course-row .course-name:hover p{
+    color: white;
+}
+.pricing span{
+    color: #d5c455;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 1.3px;
+}
+.pricing .pricing-row{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.pricing .pricing-row .pricing-box{
+    width: 300px;
+    height: 510px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px 1px rgb(236, 236, 236);
+    background-color: white;
+}
+.pricing .pricing-row .pricing-box h2{
+    font-size: 50px;
+    color: #d5c455;
+    font-weight: 100;
+    padding-top: 20px;
+}
+.pricing .pricing-row .pricing-box ul{
+    margin: auto;
+    padding: 25px 25px 0px 25px;
+    text-align: left;
+}
+.pricing .pricing-row .pricing-box ul li{
+    margin-bottom: 2px;
+    padding: 10px;
+    color: #999999;
+    text-align: center;
+    font-size: 16px;
+}
+.pricing .pricing-row .pricing-box ul li i{
+    color: #d5c455;
+}
+.pricing .pricing-row .pricing-box button{
+    margin-top: 45px;
+    border-radius: 3px;
+    border: none;
+    padding: 15px 30px;
+    background-color: #d5c455;
+}
+.pricing .pricing-row .pricing-box button a{
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+button:focus{
+    box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
+}
+.Copyright{
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 13px;
+    color: #999999;
+}
+
+/* Media Query is for Mobile */
+@media (max-width:480px){
+    nav{
+        width: 100%;
+        padding: 0px 10px;
+        background-color: #222222;
+    }
+    nav h1,i{
+        color: white;
+    }
+    nav ul{
+        box-shadow: none;
+        right: 15%;
+    }
+    header{
+        width: 100%;
+    }
+    header .course-row,.pricing-row{
+        display: flex;
+        flex-direction: column;
+    }
+    header .course-row .course-name{
+        width: 95%;
+        margin: 15px auto;
+    }
+    .pricing .pricing-row .pricing-box{
+        margin: 30px auto;
+        width: 95%;
+    }
+    .pricing .pricing-row .pricing-box button{
+        padding: 15px 65px;
+    }
+    header h5 i{
+        color: #00000066;
+    }
+}

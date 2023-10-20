@@ -1,0 +1,146 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'poppins';
+    text-decoration: none;
+    list-style-type: none;
+}
+body{
+    background-color: #f8f8f8;
+}
+.main{
+    width: 100%;
+}
+nav{
+    width: 67%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+nav i{
+    position: relative;
+    padding: 10px 10px 10px 30px;
+}
+nav ul{
+    position: absolute;
+    right: 0px;
+    width: 180px;
+    margin-top: 8px;
+    background-color: white;
+    font-weight: 700;
+    padding: 22px 0px 0px 22px;
+    display: none;
+    box-shadow: 0px 0px 8px 2px rgb(237, 237, 237);
+}
+nav ul li{
+    padding-bottom: 22px;
+}
+nav ul li a{
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.7);
+}
+nav i:hover ul{
+    display: block;
+}
+header{
+    width: 68%;
+    margin: 150px auto;
+    text-align: center;
+}
+header h5{
+    color: #00000066;
+    font-weight: 700;
+    font-size: 14px;
+}
+header a{
+    color: #00000066;
+}
+header a:hover{
+    color: #d5c455;
+    transition: all 0.2s;
+}
+header h1{
+    font-size: 40px;
+    margin-top: 10px;
+}
+header .experience-row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+header .experience-row .experience-box{
+    text-align: left;
+    width: 635px;
+    height: 300px;
+    padding: 0px 30px;
+    margin-bottom: 50px;
+    box-shadow: 0px 0px 8px 1px rgb(243, 243, 243);
+    background-color: white;
+}
+header .experience-row .experience-box .graduate-icon{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    top: -10%;
+    background-color: #d5c455;
+}
+header .experience-row .experience-box .graduate-icon svg{
+    height: 40px;
+    width: 40px;
+    margin-top: 9px;
+}
+header .experience-row .experience-box .graduate-icon svg path{
+    stroke: white;
+}
+header .experience-row .experience-box span{
+    color: #d5c455;
+    font-size: 16px;
+}
+header .experience-row .experience-box i{
+    font-size: 10px;
+    color: #d5c455;
+}
+header .experience-row .experience-box .para{
+    color: #999999;
+    font-weight: 100;
+    margin-top: 20px;
+    font-size: 16px;
+}
+.Copyright{
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 13px;
+    color: #999999;   
+}
+
+/* Media Query is for Mobile */
+@media (max-width:480px){
+    nav{
+        width: 100%;
+        padding: 0px 10px;
+        background-color: #222222;
+    }
+    nav h1,i{
+        color: white;
+    }
+    nav ul{
+        box-shadow: none;
+        right: 15%;
+    }
+    header{
+        width: 100%;
+    }
+    header .experience-row .experience-box{
+        width: 95%;
+        margin: 25px auto;
+    }
+    header h5 i{
+        color: #00000066;
+    }
+}
