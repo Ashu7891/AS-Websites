@@ -1,0 +1,115 @@
+@media (max-width: 480px){
+    .admin-box .navbar{
+        display: none;
+    }
+    .admin-box .navi{
+        display: block;
+        margin-left: -270px;
+        transition: all 0.6s;
+        height: 100%;
+    }
+    .slidebar{
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 6%;
+        border: none;
+        outline: none;
+        font-size: 28px;
+        transition: all 0.6s;
+        background-color: #015774;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+    }
+    .hamburger{
+        width: 20px;
+        height: 2px;
+        border-radius: 25px;
+        background-color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .hamburger::after{
+        top: 6px;
+        border-radius: 25px;
+    }
+    .hamburger::before{
+        bottom: 6px;
+        border-radius: 25px;
+    }
+    .hamburger::after,
+    .hamburger::before{
+        transition: all 0.2s;
+        position: absolute;
+        left: 0%;
+        content: '';
+        width: 20px;
+        height: 2px;
+        background-color: white;
+    }
+    .slidebar.active{
+        margin-left: 255px;
+    }
+    .slidebar.active .hamburger{
+        background: none;
+    }
+    .slidebar.active .hamburger::after{
+        top: 0%;
+        transform: rotate(-45deg);
+    }
+    .slidebar.active .hamburger::before{
+        bottom: 0%;
+        transform: rotate(45deg);
+    }
+    .navi.left{
+        margin-left: 0%;
+    }
+    .admin-box .content{
+        width: 480px;
+        float: none;
+        padding: none;
+        padding-top: 60px;
+        margin: 0%;
+    }
+    .admin-box .content .db-name span{
+        display: block;
+    }
+    .content .dashboard-content,.data,.finance{
+        padding: 3%;
+    }
+    .content .dashboard-content .searchbar{
+        width: 50%;
+    }
+    .content .data{
+        width: 100%;
+    }
+    .content .amount{
+        width: 100%;
+        margin-bottom: 2%;
+    }
+    .content .data-row{
+        flex-direction: column;
+    }
+    .content .finance .tb1{
+        width: 300%;
+    }
+    .content .finance .tb2{
+        width: 300%;
+    }
+    .content .finance .tb2 td{
+        width: 100px;
+    }
+    .content .footer{
+        flex-direction: column;
+    }
+    .content .footer .chart{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .content .footer .container-calendar{
+        width: 100%;
+    }
+}

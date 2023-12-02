@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Icons Attachment File -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- CSS File Attachment -->
+    <link rel="stylesheet" href="Style.css">
+    <!-- Media Query File Attachment -->
+    <link rel="stylesheet" href="media.css">
+    <!-- JQuery File Attachment -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- File Attachment for Making Chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Admin Panel</title>
+</head>
+<body>
+    <div class="admin-box">
+        <div class="navbar">
+            <ul>
+                <li class="bgcolor"><a href="#"><i class="fa-solid fa-gauge-high"></i>Dashboard</a></li>
+                <li><a href="#"><i class="fa-solid fa-user"></i>Profile</a></li>
+                <li><a href="#"><i class="fa-solid fa-chart-bar"></i>Statistics</a></li>
+                <li><a href="#"><i class="fa-solid fa-briefcase"></i>Careers</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-question"></i>FAQ</a></li>
+                <li><a href="#"><i class="fa-solid fa-star"></i>Testimonials</a></li>
+                <li><a href="#"><i class="fa-solid fa-gear"></i>Settings</a></li>
+                <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i>Layout</a></li>
+            </ul>
+        </div>
+        <div class="navi">
+            <ul>
+                <li class="bgcolor"><a href="#"><i class="fa-solid fa-gauge-high"></i>Dashboard</a></li>
+                <li><a href="#"><i class="fa-solid fa-user"></i>Profile</a></li>
+                <li><a href="#"><i class="fa-solid fa-chart-bar"></i>Statistics</a></li>
+                <li><a href="#"><i class="fa-solid fa-briefcase"></i>Careers</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-question"></i>FAQ</a></li>
+                <li><a href="#"><i class="fa-solid fa-star"></i>Testimonials</a></li>
+                <li><a href="#"><i class="fa-solid fa-gear"></i>Settings</a></li>
+                <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i>Layout</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <button class="slidebar">
+                <div class="hamburger">
+                </div>
+            </button>
+            <div class="dashboard-content">
+                <div class="db-name">
+                    <p>Primary</p>
+                    <h2>Dashboard</h2>
+                </div>
+                <div class="searchbar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" placeholder="Search">
+                </div>
+                <div class="profile">
+                    <img src="image/profile.png" alt="">
+                </div>
+            </div>
+            <div class="data">
+                <h4>Today's Data</h4>
+                <div class="data-row">
+                    <div class="amount">
+                        <div class="amount-row">
+                            <div class="payment">
+                                <h5>Payment Amount</h5>
+                                <h4>$650.00</h4>
+                            </div>
+                            <h3><i class="fa-solid fa-dollar-sign"></i></h3>
+                        </div>
+                        <h5 style="color: #0c7ba0;">Nykaa Fashion (Surat)</h5>
+                    </div>
+                    <div class="amount">
+                        <div class="amount-row">
+                            <div class="payment">
+                                <h5>Payment Amount</h5>
+                                <h4>$400.00</h4>
+                            </div>
+                            <h3><i class="fa-solid fa-dollar-sign"></i></h3>
+                        </div>
+                        <h5 style="color: #0c7ba0;">Myntra Fashion (Ahmedabad)</h5>
+                    </div>
+                    <div class="amount">
+                        <div class="amount-row">
+                            <div class="payment">
+                                <h5>Payment Amount</h5>
+                                <h4>$500.00</h4>
+                            </div>
+                            <h3><i class="fa-solid fa-dollar-sign"></i></h3>
+                        </div>
+                        <h5 style="color: #0c7ba0;">Gayatri Fashion (Rajkot)</h5>
+                    </div>
+                    <div class="amount">
+                        <div class="amount-row">
+                            <div class="payment">
+                                <h5>Payment Amount</h5>
+                                <h4>$350.00</h4>
+                            </div>
+                            <h3><i class="fa-solid fa-dollar-sign"></i></h3>
+                        </div>
+                        <h5 style="color: #0c7ba0;">Zara Fashion (Vadodara)</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="finance">
+                <h4>Finance Data</h4>
+                <div class="finance-data">
+                    <div class="scrollbar" id="style-1">
+                        <div class="force-overflow">
+                            <table class="tb1">
+                                <tr class="heading">
+                                    <td><h4>Date</h4></td>
+                                    <td><h4>Transaction Details</h4></td>
+                                    <td><h4>Description</h4></td>
+                                    <td><h4>Amount</h4></td>
+                                    <td><h4>Catagory</h4></td>
+                                    <td><h4>Status</h4></td>
+                                    <td><h4>Action</h4></td>
+                                </tr>
+                            </table>
+                            <table class="tb2">
+                                <tr class="sub-head">
+                                    <td><h5>2023-10-19</h5></td>
+                                    <td><h5>Pending Amount</h5></td>
+                                    <td><h5>Office Suplies</h5></td>
+                                    <td><h5>$250</h5></td>
+                                    <td><h5>Office Expenses</h5></td>
+                                    <td><h5>Pending</h5></td>
+                                    <td><h5>Edit</h5></td>
+                                </tr>
+                                <tr class="sub-head">
+                                    <td><h5>2023-10-19</h5></td>
+                                    <td><h5>Pending Amount</h5></td>
+                                    <td><h5>Office Suplies</h5></td>
+                                    <td><h5>$250</h5></td>
+                                    <td><h5>Office Expenses</h5></td>
+                                    <td><h5>Pending</h5></td>
+                                    <td><h5>Edit</h5></td>
+                                </tr>
+                                <tr class="sub-head">
+                                    <td><h5>2023-10-19</h5></td>
+                                    <td><h5>Pending Amount</h5></td>
+                                    <td><h5>Office Suplies</h5></td>
+                                    <td><h5>$250</h5></td>
+                                    <td><h5>Office Expenses</h5></td>
+                                    <td><h5>Pending</h5></td>
+                                    <td><h5>Edit</h5></td>
+                                </tr>
+                                <tr class="sub-head">
+                                    <td><h5>2023-10-19</h5></td>
+                                    <td><h5>Pending Amount</h5></td>
+                                    <td><h5>Office Suplies</h5></td>
+                                    <td><h5>$250</h5></td>
+                                    <td><h5>Office Expenses</h5></td>
+                                    <td><h5>Pending</h5></td>
+                                    <td><h5>Edit</h5></td>
+                                </tr>
+                                <tr class="sub-head">
+                                    <td><h5>2023-10-19</h5></td>
+                                    <td><h5>Pending Amount</h5></td>
+                                    <td><h5>Office Suplies</h5></td>
+                                    <td><h5>$250</h5></td>
+                                    <td><h5>Office Expenses</h5></td>
+                                    <td><h5>Pending</h5></td>
+                                    <td><h5>Edit</h5></td>
+                                </tr>
+                                <tr class="sub-head">
+                                    <td><h5>2023-10-19</h5></td>
+                                    <td><h5>Pending Amount</h5></td>
+                                    <td><h5>Office Suplies</h5></td>
+                                    <td><h5>$250</h5></td>
+                                    <td><h5>Office Expenses</h5></td>
+                                    <td><h5>Pending</h5></td>
+                                    <td><h5>Edit</h5></td>
+                                </tr>
+                                <tr class="sub-head">
+                                    <td><h5>2023-10-19</h5></td>
+                                    <td><h5>Pending Amount</h5></td>
+                                    <td><h5>Office Suplies</h5></td>
+                                    <td><h5>$250</h5></td>
+                                    <td><h5>Office Expenses</h5></td>
+                                    <td><h5>Pending</h5></td>
+                                    <td><h5>Edit</h5></td>
+                                </tr>
+                                <tr class="sub-head">
+                                    <td><h5>2023-10-19</h5></td>
+                                    <td><h5>Pending Amount</h5></td>
+                                    <td><h5>Office Suplies</h5></td>
+                                    <td><h5>$250</h5></td>
+                                    <td><h5>Office Expenses</h5></td>
+                                    <td><h5>Pending</h5></td>
+                                    <td><h5>Edit</h5></td>
+                                </tr>
+                                <tr class="sub-head">
+                                    <td><h5>2023-10-19</h5></td>
+                                    <td><h5>Pending Amount</h5></td>
+                                    <td><h5>Office Suplies</h5></td>
+                                    <td><h5>$250</h5></td>
+                                    <td><h5>Office Expenses</h5></td>
+                                    <td><h5>Pending</h5></td>
+                                    <td><h5>Edit</h5></td>
+                                </tr>
+                                <tr class="sub-head">
+                                    <td><h5>2023-10-19</h5></td>
+                                    <td><h5>Pending Amount</h5></td>
+                                    <td><h5>Office Suplies</h5></td>
+                                    <td><h5>$250</h5></td>
+                                    <td><h5>Office Expenses</h5></td>
+                                    <td><h5>Pending</h5></td>
+                                    <td><h5>Edit</h5></td>
+                                </tr>
+                                <tr class="sub-head">
+                                    <td><h5>2023-10-19</h5></td>
+                                    <td><h5>Pending Amount</h5></td>
+                                    <td><h5>Office Suplies</h5></td>
+                                    <td><h5>$250</h5></td>
+                                    <td><h5>Office Expenses</h5></td>
+                                    <td><h5>Pending</h5></td>
+                                    <td><h5>Edit</h5></td>
+                                </tr>
+                                <tr class="sub-head">
+                                    <td><h5>2023-10-19</h5></td>
+                                    <td><h5>Pending Amount</h5></td>
+                                    <td><h5>Office Suplies</h5></td>
+                                    <td><h5>$250</h5></td>
+                                    <td><h5>Office Expenses</h5></td>
+                                    <td><h5>Pending</h5></td>
+                                    <td><h5>Edit</h5></td>
+                                </tr>
+                                <tr class="sub-head">
+                                    <td><h5>2023-10-19</h5></td>
+                                    <td><h5>Pending Amount</h5></td>
+                                    <td><h5>Office Suplies</h5></td>
+                                    <td><h5>$250</h5></td>
+                                    <td><h5>Office Expenses</h5></td>
+                                    <td><h5>Pending</h5></td>
+                                    <td><h5>Edit</h5></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="chart">
+                    <canvas id="myChart"></canvas>
+                </div>
+                <div class="calendar">
+                    <div class="wrapper">
+                        <div class="container-calendar">
+                            <div class="button-container-calendar">
+                                <button id="previous" onclick="previous()">&#8249;</button>
+                                <h3 id="monthAndYear"></h3>
+                                <button id="next" onclick="next()">&#8250;</button>
+                            </div>                     
+                            <table class="table-calendar" id="calendar" data-lang="en">
+                                <thead id="thead-month"></thead>
+                                <tbody id="calendar-body"></tbody>
+                            </table>
+                            <div class="footer-container-calendar">
+                                 <label for="month">Jump To: </label>
+                                 <select id="month" onchange="jump()">
+                                     <option value=0>Jan</option>
+                                     <option value=1>Feb</option>
+                                     <option value=2>Mar</option>
+                                     <option value=3>Apr</option>
+                                     <option value=4>May</option>
+                                     <option value=5>Jun</option>
+                                     <option value=6>Jul</option>
+                                     <option value=7>Aug</option>
+                                     <option value=8>Sep</option>
+                                     <option value=9>Oct</option>
+                                     <option value=10>Nov</option>
+                                     <option value=11>Dec</option>
+                                 </select>
+                                 <select id="year" onchange="jump()"></select>       
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- For Navbar -->
+    <script>
+        $(document).ready(function(){
+            $(".slidebar").click(function(){
+                $(".slidebar").toggleClass("active");
+                $(".navi").toggleClass("left");
+            })
+        })
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
