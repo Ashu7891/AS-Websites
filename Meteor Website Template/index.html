@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS File -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS File -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Icon File -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <!-- Font Awesome CDN File -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Media Query File -->
+    <link rel="stylesheet" href="media.css">
+    <!-- Font Family File -->
+    <link rel="stylesheet" href="Playball/stylesheet.css">
+    <title>Meteor</title>
+</head>
+<body>
+    <div class="main position-fixed w-100">
+        <div class="container p-0">
+            <nav class="navbar navbar-expand-lg navbar-light ps-3 pe-3">
+                <!-- First -->
+                <a href="#" class="navbar-brand fs-2 fw-bold text-white">Meteor</a>
+                <!-- Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Second -->
+                <div class="collapse navbar-collapse justify-content-end">
+                    <ul class="navbar-nav list-unstyled">
+                        <li class="nav-item"><a href="#example" class="nav-link active text-white">Home</a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link text-white">About us</a></li>
+                        <li class="nav-item"><a href="#portfolio" class="nav-link text-white">Portfolio</a></li>
+                        <li class="nav-item"><a href="#blog" class="nav-link text-white">Blog</a></li>
+                        <li class="nav-item"><a href="#contact-us" class="nav-link text-white">Contact us</a></li>
+                    </ul>
+                </div>
+                <!-- Offcanvas -->
+                <div class="offcanvas offcanvas-end w-75" id="offcanvasMenu">
+                    <div class="offcanvas-header">
+                        <div class="offcanvas-title fs-1 fw-bold">Meteor</div>
+                        <button class="btn btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav list-unstyled">
+                            <li class="nav-item"><a href="#example" class="nav-link active fs-5" data-bs-dismiss="offcanvas">Home</a></li>
+                            <li class="nav-item"><a href="#about" class="nav-link fs-5" data-bs-dismiss="offcanvas">About us</a></li>
+                            <li class="nav-item"><a href="#portfolio" class="nav-link fs-5" data-bs-dismiss="offcanvas">Portfolio</a></li>
+                            <li class="nav-item"><a href="#blog" class="nav-link fs-5" data-bs-dismiss="offcanvas">Blog</a></li>
+                            <li class="nav-item"><a href="#contact-us" class="nav-link fs-5" data-bs-dismiss="offcanvas">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Autoplay background images carousel -->
+    <div id="example" class="carousel slide" data-bs-ride="carousel" data-interval="20">
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: radial-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('images/mountain.jpg');">
+                <div class="carousel-caption">
+                    <h1 class="mb-3 text-uppercase">Welcome to My website</h1>
+                    <p class="m-auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore nostrum rem non aliquid possimus voluptas porro ex id vero, quasi perferendis sequi laborum exercitationem consequuntur, in deleniti itaque similique veritatis?</p>
+                    <button type="button" class="btn pt-2 pb-2 pe-4 ps-4 rounded-pill border-0 mt-3"><a href="" class="text-white">View Details</a></button>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: radial-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('images/mountain-2.jpg');">
+                <div class="carousel-caption">
+                    <h1 class="mb-3 text-uppercase">Responsive Layout</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore nostrum rem non aliquid possimus voluptas porro ex id vero, quasi perferendis sequi laborum exercitationem consequuntur, in deleniti itaque similique veritatis?</p>
+                    <button type="button" class="btn pt-2 pb-2 pe-4 ps-4 rounded-pill border-0 mt-3"><a href="" class="text-white">View Details</a></button>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: radial-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('images/mountain-3.jpg');">
+                <div class="carousel-caption">
+                    <h1 class="mb-3 text-uppercase">Responsive Layout</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore nostrum rem non aliquid possimus voluptas porro ex id vero, quasi perferendis sequi laborum exercitationem consequuntur, in deleniti itaque similique veritatis?</p>
+                    <button type="button" class="btn pt-2 pb-2 pe-4 ps-4 rounded-pill border-0 mt-3"><a href="" class="text-white">View Details</a></button>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: radial-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('images/mountain-4.jpg');">
+                <div class="carousel-caption">
+                    <h1 class="mb-3 text-uppercase">Responsive Layout</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore nostrum rem non aliquid possimus voluptas porro ex id vero, quasi perferendis sequi laborum exercitationem consequuntur, in deleniti itaque similique veritatis?</p>
+                    <button type="button" class="btn pt-2 pb-2 pe-4 ps-4 rounded-pill border-0 mt-3"><a href="" class="text-white">View Details</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header mt-5 mb-5 pt-4 pb-4 ps-1 pe-1" id="about">
+        <div class="container">
+            <h4 class="custom-hover-element">What We Do</h4>
+            <div class="row text-center justify-content-between mt-4">
+                <div class="col-12 col-lg-3 mt-4">
+                    <div class="box p-4">
+                        <div class="icon mb-2">
+                            <i class="bi bi-pencil fs-3"></i>
+                        </div>
+                        <h5>Easy Customizations</h5>
+                        <p>Meteor is free HTML website template by Tooplate. Feel free to use this layout for your project.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 mt-4">
+                    <div class="box p-4">
+                        <div class="icon mb-2">
+                            <i class="bi bi-lightbulb fs-3"></i>
+                        </div>
+                        <h5>Creative Ideas</h5>
+                        <p>Biodiesel schltz suculents phone cliche ramps snackwave coloring book tumeric poke, typewriter.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 mt-4">
+                    <div class="box p-4">
+                        <div class="icon mb-2">
+                            <i class="bi bi-cash-coin fs-3"></i>
+                        </div>
+                        <h5>Good Profit</h5>
+                        <p>Biodiesel schltz suculents phone cliche ramps snackwave coloring book tumeric poke, typewriter.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 mt-4">
+                    <div class="box p-4">
+                        <div class="icon mb-2">
+                            <i class="bi bi-megaphone fs-3"></i>
+                        </div>
+                        <h5>Open To Public</h5>
+                        <p>Biodiesel schltz suculents phone cliche ramps snackwave coloring book tumeric poke, typewriter.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="offer ps-1 pe-1">
+        <div class="container">
+            <div class="row align-items-center text-white">
+                <div class="col-12 col-lg-6">
+                    <h4>New offers just arrived, <br>
+                        Get it now and take profit.</h4>
+                    <p>Gochujang pitchfork post-ironic hammock kombucha fanny pack cronut. Raw denim chicharrones semiotics af truffaut pinterest. Distillery letterpress authentic adaptogen. Meditation schlitz humblebrag photo booth celiac cliche chartreuse.
+                    <br>
+                    <br>
+                    Pinterest 90's wolf celiac dreamcatcher listicle deep v semiotics. Intelligentsia literally meggings trust fund put a bird on it. Shoreditch crucifix artisan pug shaman twee. Health goth bicycle rights retro iPhone.</p>
+                    <div class="buttons">
+                        <button class="white-button pe-3 ps-3 rounded-pill text-uppercase me-3"><a href="">Discover More</a></button>
+                        <button class="green-button pe-3 ps-3 rounded-pill text-uppercase"><a href="">Purchase Now</a></button>
+                    </div>
+                </div>
+                <div class="col-12 mt-5 col-lg-6">
+                    <img src="images/dinner.png" alt="" class="img-fluid w-100">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio mt-5 mb-5 pt-4 pb-4" id="portfolio">
+        <div class="container">
+            <h4 class="custom-hover-element">Our Portfolio</h4>
+            <ul class="nav nav-pills justify-content-center mt-4 mb-4" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-home" aria-selected="true">All</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-nature" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Nature</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-workspace" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Workspace</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-city" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">City</button>
+                  </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-technology" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Technology</button>
+                </li>
+            </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <div class="row p-1">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 images">
+                            <img src="images/img-1.jpg" alt="" class="img-fluid w-100 mb-4">
+                            <div class="bg">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 images">
+                            <img src="images/img-2.jpg" alt="" class="img-fluid w-100 mb-4">
+                            <div class="bg">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 images">
+                            <img src="images/img-3.jpg" alt="" class="img-fluid w-100 mb-4">
+                            <div class="bg">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 images">
+                            <img src="images/img-4.jpg" alt="" class="img-fluid w-100 mb-4">
+                            <div class="bg">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                    
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 images">
+                            <img src="images/img-5.jpg" alt="" class="img-fluid w-100 mb-4">
+                            <div class="bg">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 images">
+                            <img src="images/img-6.jpg" alt="" class="img-fluid w-100 mb-4">
+                            <div class="bg">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-3 images">
+                            <img src="images/img-7.jpg" alt="" class="img-fluid w-100 mb-4">
+                            <div class="bg">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-3 images">
+                            <img src="images/img-8.jpg" alt="" class="img-fluid w-100 mb-4">
+                            <div class="bg">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-nature" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <div class="row p-1">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 images">
+                            <img src="images/img-5.jpg" alt="" class="img-fluid w-100 mb-4">
+                            <div class="bg">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-workspace" role="tabpanel" aria-labelledby="pills-contact-tab">
+                    <div class="row p-1">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 images">
+                            <img src="images/img-1.jpg" alt="" class="img-fluid w-100 mb-4">
+                            <div class="bg">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 images">
+                            <img src="images/img-2.jpg" alt="" class="img-fluid w-100 mb-4">
+                            <div class="bg">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 images">
+                            <img src="images/img-7.jpg" alt="" class="img-fluid w-100 mb-4">
+                            <div class="bg">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-city" role="tabpanel" aria-labelledby="pills-contact-tab">
+                    <div class="row p-1">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 images">
+                            <img src="images/img-4.jpg" alt="" class="img-fluid w-100 mb-4">
+                            <div class="bg">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 images">
+                            <img src="images/img-8.jpg" alt="" class="img-fluid w-100 mb-4">
+                            <div class="bg">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-technology" role="tabpanel" aria-labelledby="pills-contact-tab">
+                    <div class="row p-1">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 images">
+                            <img src="images/img-3.jpg" alt="" class="img-fluid w-100 mb-4">
+                            <div class="bg">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 images">
+                            <img src="images/img-5.jpg" alt="" class="img-fluid w-100 mb-4">
+                            <div class="bg">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="blog" id="blog">
+        <div class="container">
+            <h4 class="custom-hover-element">Our Blog Posts</h4>
+            <div class="row mt-5">
+                <div class="col-12 col-lg-6 food p-3">
+                    <img src="images/blog-1.jpg" alt="" class="img-fluid w-100">
+                    <div class="image-detail p-3">
+                        <h5>Delecioius Food Served</h5>
+                        <P class="mb-0">Posted: <b>George</b> / Date: <b>11 Aug 2045</b> / Category: <b>Design</b></P>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 p-3">
+                    <div class="row">
+                        <div class="col-12 mb-4 food">
+                            <img src="images/blog-2.jpg" alt="" class="img-fluid w-100">
+                            <div class="image-detail p-3">
+                                <h5>Creative & Clean Workspace</h5>
+                                <P class="mb-0">Posted: <b>Kerley</b> / Date: <b>24 Jul 2045</b> / Category: <b>Artwork</b></P>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-2 food">
+                            <img src="images/blog-3.jpg" alt="" class="img-fluid w-100">
+                            <div class="image-detail p-3">
+                                <h5>Crashed Plane Captured</h5>
+                                <P class="mb-0">Posted: <b>Johnny</b> / Date: <b>16 Jul 2045</b> / Category: <b>Branding</b></P>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="counter mt-5 mb-5 pt-4 pb-4">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12 col-sm-6 col-lg-3 p-3">
+                    <div class="count p-5">
+                        <h3 id="number1" class="number">0</h3>
+                        <p class="mb-0">REGULAR VISITORS</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 p-3">
+                    <div class="count p-5">
+                        <h3 id="number2" class="number">0</h3>
+                        <p class="mb-0">FINISHED PROJECTS</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 p-3">
+                    <div class="count p-5">
+                        <h3 id="number3" class="number">0</h3>
+                        <p class="mb-0">HAPPY CLIENTS</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 p-3">
+                    <div class="count p-5">
+                        <h3 id="number4" class="number">0</h3>
+                        <p class="mb-0">TOTAL AWARDS</p>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact" id="contact-us">
+        <div class="container">
+            <h4 class="custom-hover-element">Contact Us</h4>
+            <div class="row mt-5">
+                <div class="col-12 col-lg-6 p-3">
+                    <div class="info">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.250597515715!2d72.87893757592018!3d21.142423183863624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be051c06d87ab17%3A0x809cd984bd5b6d6d!2sRed%20%26%20White%20Multimedia%20Education!5e0!3m2!1sen!2sin!4v1701939398089!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 p-3">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <fieldset>
+                                <input type="text" class="form-control" placeholder="Your Name...">
+                            </fieldset>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <fieldset>
+                                <input type="email" class="form-control" placeholder="Your Email...">
+                            </fieldset>
+                        </div>
+                        <div class="col-12 col-lg-12">
+                            <textarea class="form-control" cols="30" rows="12" placeholder="Your Message..."></textarea>
+                        </div>
+                    </div>
+                    <button class="green-button pe-3 ps-3 rounded-pill text-uppercase"><a href="">Send Message</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="p-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <p class="text-white m-0">Created By: Ashish Sharma</p>
+                </div>
+                <div class="col-12 col-lg-6 text-white d-flex justify-content-end ">
+                    <div class="icons">
+                        <a href="" class="ms-1"><i class="fa-brands fa-facebook-f pe-1 ps-1"></i></a>
+                        <a href="" class="ms-1"><i class="bi bi-twitter"></i></a>
+                        <a href="" class="ms-1"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="" class="ms-1"><i class="fa-solid fa-rss"></i></a>
+                        <a href="" class="ms-1"><i class="bi bi-dribbble"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
