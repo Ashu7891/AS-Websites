@@ -1,0 +1,31 @@
+@media (max-width: 480px){
+    .main,.carousel,.header,.offer,.portfolio,.blog,.counter,.contact,footer{
+        width: 480px;
+    }
+    .blog .image-detail{
+        width: 94.5%;
+    }
+    .portfolio .bg{
+        width: 95%;
+        height: 94.1%;
+    }
+    .contact iframe{
+        width: 408px;
+        margin-bottom: 40px;
+    }
+    footer .col-12{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    footer .icons{
+        margin: auto;
+    }
+    .carousel-caption{
+        width: 400px;
+    }
+    .carousel p{
+        width: 390px;
+        margin: auto;
+        font-size: 15px;
+    }
+}
