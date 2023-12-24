@@ -1,0 +1,475 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+:root{
+    --tx-green: #26d48c;
+    --bg-blue: #1842b6;
+    --hover-blue: #134ae0;
+    --bg-light: #f8f8f9;
+    --bg-lightgray: #e3f0eb;
+    --tx-gray: #787878;
+}
+.head-1{
+    background-color: black;
+}
+.head-1 .container .bi,
+.head-1 .container marquee{
+    color: var(--tx-green);
+}
+.head-1 p{
+    font-size: 13px;
+    font-weight: 500;
+}
+.head-1 .container .bx{
+    color: var(--bg-blue);
+}
+.head-2{
+    background-color: var(--bg-blue);
+}
+.head-2 span{
+    font-size: 18px;
+    color: rgba(221, 221, 221, 0.589);
+}
+.head-2 ul li a{
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s;
+}
+.head-2 ul li a:hover{
+    color: var(--tx-green);
+}
+.head-2 .dropdown{
+    position: relative;
+}
+.head-2 .dropdown .dropdown-menu{
+    position: absolute;
+    top: 30px;
+    transition: all 0.5s;
+}
+.head-2 .dropdown-menu .dropdown-item a{
+    color: rgb(110, 110, 110);
+    font-weight: 500;
+}
+.head-2 .dropdown:hover .dropdown-menu{
+    display: block;
+}
+.carousel .carousel-indicators li{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+.carousel .carousel-control-prev{
+    width: 5%;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    background-color: var(--bg-blue);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    transition: all 0.5s;
+    opacity: 1;
+}
+.carousel .carousel-control-next{
+    width: 5%;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    background-color: var(--bg-blue);
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    transition: all 0.5s;
+    opacity: 1;
+}
+.carousel .carousel-control-prev:hover,
+.carousel .carousel-control-next:hover{
+    background-color: var(--tx-green);
+}
+.carousel .slide::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4));
+}
+.carousel .carousel-inner .carousel-caption{
+    position: absolute;
+    top: 28%;
+    z-index: 1;
+}
+.carousel .carousel-indicators li{
+    background-color: var(--bg-blue);
+    transition: all 0.5s;
+}
+.carousel .carousel-indicators li:hover{
+    background-color: var(--tx-green); 
+}
+.carousel .carousel-inner .carousel-caption p{
+    color: var(--tx-green);
+    font-weight: 500;
+    font-size: 28px;
+}
+.carousel .carousel-inner .carousel-caption h1{
+    margin-bottom: 20px;
+    font-size: 75px;
+}
+.carousel .carousel-inner .carousel-caption h6{
+    font-size: 20px;
+    width: 50%;
+    margin: auto;
+}
+.carousel .left-btn a{
+    background-color: var(--tx-green);
+    padding: 12px 0px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+.carousel .left-btn a:hover{
+    background-color: var(--bg-blue);
+    color: white;
+}
+.carousel .right-btn a{
+    background-color: var(--bg-blue);
+    padding: 12px 0px;
+    font-weight: 500;
+    color: white;
+    transition: all 0.5s;
+}
+.carousel .right-btn a:hover{
+    background-color: var(--tx-green);
+    color: black;
+}
+.counter{
+    background-color: var(--tx-green);
+}
+.counter h1{
+    color: var(--bg-blue);
+}
+.about .images{
+    position: relative;
+}
+.about img{
+    border-radius: 15px;
+    width: 70%;
+}
+.about .image-2{
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+section .heading{
+    margin: auto;
+}
+.service .fa-solid{
+    font-size: 7rem;
+    color: var(--bg-blue);
+    transition: all 0.5s;
+}
+.service p{
+    font-size: 17px;
+    color: rgba(128, 128, 128, 0.801);
+    font-weight: 500;
+    transition: all 0.5s;
+}
+.service .btn{
+    background-color: var(--tx-green);
+}
+.service .service-box{
+    border-radius: 15px;
+    position: relative;
+}
+.service .bg-color{
+    height: 0%;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    border-radius: 15px;
+    background-color: var(--hover-blue);
+    transition: all 0.5s;
+    z-index: -1;
+}
+.service .service-box:hover .bg-color{
+    height: 100%;
+}
+.service .service-box:hover .fa-solid{
+    color: var(--tx-green);
+}
+.service .service-box:hover p{
+    color: rgb(226, 226, 226);
+}
+.project .project-box{
+    position: relative;
+}
+.project .project-image::before,
+.project .project-image::after{
+    content: '';
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    z-index: -1;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+.project .project-image::before{
+    top: 0%;
+    left: 0%;
+    background-color: var(--tx-green);
+}
+.project .project-image::after{
+    bottom: 0%;
+    right: 0%;
+    background-color: var(--bg-blue);
+}
+.project .project-image img{
+    border-radius: 10px;
+}
+.project .project-content{
+    background-color: var(--bg-blue);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.project .project-content h4{
+    color: var(--tx-green);
+}
+.project .project-box:hover .project-content{
+    opacity: 1;
+}
+.project .project-box:hover .project-image::before,
+.project .project-box:hover .project-image::after{
+    opacity: 0;
+}
+.blog .blog-box{
+    background-color: var(--bg-light);
+    border-radius: 10px;
+    position: relative;
+}
+.blog .blog-image{
+    position: relative;
+}
+.blog .blog-box button{
+    position: absolute;
+    bottom: 6%;
+    background-color: var(--tx-green);
+    width: 135px;
+    height: 50px;
+    overflow: hidden;
+}
+.blog .blog-box .left{
+    left: 4%;
+}
+.blog .blog-box .right{
+    right: 4%;
+}
+.blog .blog-image button ul{
+    position: absolute;
+    left: -90%;
+    top: 30%;
+    transition: all 0.5s;
+    visibility: hidden;
+}
+.blog .blog-image .right:hover ul{
+    left: -3%;
+    visibility: visible;
+}
+.blog .blog-box .right:hover p{
+    display: none;
+}
+.blog .blog-box img{
+    border-radius: 10px;
+}
+.blog .blog-image h6{
+    position: absolute;
+    top: -8%;
+    right: 5%;
+    background-color: var(--bg-blue);
+    border-radius: 10px;
+}
+.blog .blog-content img{
+    position: absolute;
+    left: 50%;
+    top: 54%;
+    transform: translate(-50%, -50%);
+    border: 4px solid var(--bg-light);
+}
+.blog .blog-content .date{
+    color: var(--tx-green);
+    font-weight: 500;
+}
+.blog .blog-content p{
+    color: gray;
+}
+.blog .blog-footer{
+    background-color: var(--bg-blue);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.blog .blog-box .blog-footer .fa-solid{
+    color: var(--tx-green);
+}
+.team .carousel .carousel-control-prev,
+.team .carousel .carousel-control-next{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    top: -12%;
+    background-color: var(--tx-green);
+    opacity: 1;
+}
+.team .carousel .carousel-control-prev{
+    left: 85%;
+}
+.team .carousel .carousel-control-next{
+    right: 6%;
+}
+.team .carousel .carousel-control-prev:hover,
+.team .carousel .carousel-control-next:hover{
+    background-color: var(--hover-blue);
+}
+.team .team-box{
+    background-color: #f0f0f0;
+    position: relative;
+    z-index: 2;
+    border-radius: 10px;
+}
+.team .team-box::after{
+    content: '';
+    height: 30px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0%;
+    background-color: var(--tx-green);
+    z-index: -2;
+    border-radius: 10px 10px 0px  0px;
+}
+.team .team-box::before{
+    content: '';
+    height: 200px;
+    width: 100%;
+    background-color: var(--tx-green);
+    display: block;
+    position: absolute;
+    top: -13.8%;
+    clip-path: polygon(50% 50%,
+                   100% 50%,
+                   50% 100%,
+                    0% 50%);
+    z-index: -2;
+
+}
+.team .team-box .team-image{
+    background-color: white;
+    height: 78%;
+    width: 78%;
+    border-radius: 50%;
+    padding: 15px;
+    margin: auto;
+}
+.team .team-box .team-image img{
+    border: 10px solid var(--tx-green);
+    transition: all 0.5s;
+}
+.team .team-box:hover img{
+    transform: scale(1.06);
+}
+.team .team-box .team-icon a{
+    padding: 8px 10px;
+    background-color: var(--tx-green);
+}
+.team .team-box:hover h4{
+    color: var(--bg-blue);
+    transition: all 0.5s;
+}
+.testimonial .owl-carousel .item{
+    background-color: var(--bg-lightgray);
+    border: 1px solid rgb(219, 219, 219);
+}
+.testimonial .owl-carousel .item p{
+    color: var(--tx-gray);
+    font-weight: 500;
+}
+.contact .contact-box{
+    position: relative;
+}
+.contact .contact-box .contact-info{
+    border-radius: 8px;
+}
+.contact .contact-box .contact-info h4{
+    color: var(--bg-blue);
+}
+.contact .contact-box .contact-info h5:hover{
+    color: var(--bg-blue);
+    cursor: pointer;
+}
+.contact p{
+    color: var(--tx-gray);
+    width: 50%;
+}
+.contact .contact-box .contact-row::before{
+    content: '';
+    background: linear-gradient(rgb(210, 243, 235, 1), rgba(230, 250, 245, 0.3)), url('/images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+    border-radius: 8px;
+}
+.contact .contact-box .map, .form{
+    background-color: var(--tx-green);
+    border-radius: 8px;
+}
+.contact .contact-box .form input{
+    height: 50px;
+    border-radius: 8px;
+}
+.contact .contact-box .form button{
+    background-color: var(--bg-blue);
+    padding: 13px 35px;
+    border-radius: 8px;
+}
+footer{
+    background-color: black;
+}
+footer span a{
+    padding: 7px 10px;
+    background-color: white;
+    font-size: 20px;
+    border-radius: 50%;
+    margin-right: 1px;
+    transition: all 0.5s;
+}
+footer span a i{
+    color: var(--bg-blue);
+}
+footer h2,
+footer ul li i{
+    color: var(--tx-green);
+}
+footer ul li{
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s;
+}
+footer ul li:hover{
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+footer .container span a:hover{
+    background-color: var(--tx-green);
+}
