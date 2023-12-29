@@ -1,7 +1,4 @@
 @media (max-width: 480px){
-    .main,.carousel,.header,.offer,.portfolio,.blog,.counter,.contact,footer{
-        width: 480px;
-    }
     .blog .image-detail{
         width: 94.5%;
     }
@@ -10,7 +7,7 @@
         height: 94.1%;
     }
     .contact iframe{
-        width: 408px;
+        width: 200px;
         margin-bottom: 40px;
     }
     footer .col-12{
@@ -24,7 +21,7 @@
         width: 400px;
     }
     .carousel p{
-        width: 390px;
+        width: 305px;
         margin: auto;
         font-size: 15px;
     }
