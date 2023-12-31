@@ -1,0 +1,40 @@
+@media(max-width: 480px){
+    header .row .image-box{
+        height: 650px;
+        margin-top: 20px;
+    }
+    header .row h1,
+    main .row h1,
+    main .container h1{
+        font-size: 38px;
+    }
+    section h1{
+        font-size: 45px;
+    }
+    .counter{
+        height: 100vh;
+    }
+}
+@media(min-width: 481px) and (max-width: 767px){
+    header .row .image-box{
+        height: 700px;
+        margin-top: 20px;
+    }
+    header .row h1,
+    main .row h1,
+    main .container h1{
+        font-size: 38px;
+    }
+    section h1{
+        font-size: 45px;
+    }
+    .counter{
+        height: 100vh;
+    }
+}
+@media(min-width: 768px) and (max-width: 991px){
+    header .row .image-box{
+        height: 1000px;
+        margin-top: 20px;
+    }
+}
