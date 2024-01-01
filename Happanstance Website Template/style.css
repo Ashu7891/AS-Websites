@@ -1,0 +1,125 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+.header{
+    z-index: 200;
+    top: 0%;
+    position: fixed;
+    top: 0%;
+    height: 46px;
+}
+.section{
+    z-index: 200;
+    top: 0%;
+    position: fixed;
+    top: 5%;
+    background-color: rgba(255, 255, 255, 0.945);
+}
+section ul li a,
+.section a{
+    color: black;
+}
+section ul li{
+    position: relative;
+}
+section ul li a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    display: block;
+    margin: auto;
+    transition: all 0.5s;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+}
+section ul li:hover a::after{
+    width: 100%;
+}
+.container-fluid .container p,
+footer .container p{
+    margin: auto;
+    text-align: center;
+    color: gray;
+    position: relative;
+}
+.container-fluid .container p::after,
+.container-fluid .container p::before,
+footer .container p::after,
+footer .container p::before{
+    content: '';
+    height: 1px;
+    width: 43.5%;
+    background-color: rgb(204, 204, 204);
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+}
+.container-fluid .container p::after,
+footer .container p::after{
+    right: 0%;
+}
+.container-fluid .container p::before,
+footer .container p::before{
+    left: 0%;
+}
+.container-fluid h6{
+    font-size: 12px;
+    margin-left: 6px;
+}
+footer{
+    background-color: rgba(218, 218, 218, 0.24);
+    border-top: 1px solid rgba(175, 175, 175, 0.774);
+}
+footer a{
+    color: rgb(77, 77, 77);
+    font-size: 18px;
+    font-weight: 500;
+}
+footer .icons span{
+    position: relative;
+}
+footer .icons i{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 14px;
+    margin: 5px;
+    transition: all 0.5s;
+    border: 1px solid black;
+}
+footer .icons i:hover{
+    background-color: black;
+    color: white;
+}
+@media(max-width: 480px){
+    .section{
+        top: 7%;
+    }
+    .section .logo{
+        position: absolute;
+        top: -67%;
+        width: 100%;
+        text-align: center;
+    }
+    .section .logo a{
+        color: white;
+    }
+    .section ul{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .container-fluid .container p::after,
+    .container-fluid .container p::before,
+    footer .container p::after,
+    footer .container p::before{
+        width: 32%;
+    }
+}
