@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- font Family File -->
+    <link rel="stylesheet" href="fonts/unito sans.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Remix icon CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.css" integrity="sha512-ZH3KB6wI5ADHaLaez5ynrzxR6lAswuNfhlXdcdhxsvOUghvf02zU1dAsOC6JrBTWbkE1WNDNs5Dcfz493fDMhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Boxicon CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css" integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- mychart CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <!-- google chart CDN  -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Admin Panel</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-white px-lg-5 position-fixed w-100" style="z-index: 2;">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+                <i class="fa-solid fa-bars d-lg-none text-dark ms-2 me-3" id="menu"></i>
+                <img src="images/logo.png" alt="" class="">
+                <span class="collapse navbar-collapse ms-2 fs-3 text-secondary">Phonix</span>
+            </a>
+            <div class="collapse navbar-collapse">
+                <div class="form-control rounded-pill d-flex align-items-center w-25 m-auto">
+                    <i class="fa-solid fa-magnifying-glass text-secondary"></i>
+                    <input type="search" class="border-0 ms-2 w-100" placeholder="Search...">
+                </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between" style="width: 110px;">
+                <div class="bell dropstart">
+                    <i class="fa-regular fa-bell fs-5 btn-group-vertical" id="dropdownMenu" data-bs-toggle="dropdown"></i>
+                    <ul class="list-unstyled top-100 end-0 dropdown-menu py-0 mt-3">
+                        <p class="d-flex justify-content-between align-items-center mb-0 px-2 py-1 border-bottom">
+                            <span class="fw-bold">Notification</span>
+                            <a href="" style="font-size: 13px;">Mark all as Ready</a>
+                        </p>
+                        <div class="slide" id="style-1">
+                            <li class="d-flex justify-content-between align-items-center px-3 pt-3 border-bottom">
+                                <div class="avatar d-flex">
+                                    <div class="image">
+                                        <img src="images/bell 1.webp" alt="" class="rounded-circle me-3">
+                                    </div>
+                                    <div class="avatar-content">
+                                        <h6 class="m-0 fw-bold">Jessie Samson</h6>
+                                        <p style="font-size: 14px;"><i class="fa-regular fa-comment-dots me-2 fs-6 align-middle"></i>Mentioned you in a comment<span class="d-inline" style="font-size: 11px;">&nbsp;&nbsp;10m</span></p>
+                                        <span style="font-size: 14px;"><i class="fa-solid fa-clock me-2" style="font-size: 14px;"></i><p class="d-inline-block mb-2 fw-bolder">10:20 AM</p> August 7,2021</span>
+                                    </div>
+                                </div>
+                                <div class="dots rounded-1">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </div>
+                            </li>
+                            <li class="d-flex justify-content-between align-items-center px-3 pt-3 border-bottom">
+                                <div class="avatar d-flex">
+                                    <div class="image">
+                                        <img src="images/bell 2.webp" alt="" class="rounded-circle me-3">
+                                    </div>
+                                    <div class="avatar-content">
+                                        <h6 class="m-0 fw-bold">Jessie Samson</h6>
+                                        <p style="font-size: 14px;"><i class="fa-regular fa-comment-dots me-2 fs-6 align-middle"></i>Mentioned you in a comment<span class="d-inline" style="font-size: 11px;">&nbsp;&nbsp;10m</span></p>
+                                        <span style="font-size: 14px;"><i class="fa-solid fa-clock me-2" style="font-size: 14px;"></i><p class="d-inline-block mb-2 fw-bolder">10:20 AM</p> August 7,2021</span>
+                                    </div>
+                                </div>
+                                <div class="dots rounded-1"><i class="fa-solid fa-ellipsis"></i></div>
+                            </li>
+                            <li class="d-flex justify-content-between align-items-center px-3 pt-3 border-bottom">
+                                <div class="avatar d-flex">
+                                    <div class="image">
+                                        <img src="images/bell 2.webp" alt="" class="rounded-circle me-3">
+                                    </div>
+                                    <div class="avatar-content">
+                                        <h6 class="m-0 fw-bold">Jessie Samson</h6>
+                                        <p style="font-size: 14px;"><i class="fa-regular fa-comment-dots me-2 fs-6 align-middle"></i>Mentioned you in a comment<span class="d-inline" style="font-size: 11px;">&nbsp;&nbsp;10m</span></p>
+                                        <span style="font-size: 14px;"><i class="fa-solid fa-clock me-2" style="font-size: 14px;"></i><p class="d-inline-block mb-2 fw-bolder">10:20 AM</p> August 7,2021</span>
+                                    </div>
+                                </div>
+                                <div class="dots rounded-1"><i class="fa-solid fa-ellipsis"></i></div>
+                            </li>
+                            <li class="d-flex justify-content-between align-items-center px-3 pt-3 border-bottom">
+                                <div class="avatar d-flex">
+                                    <div class="image">
+                                        <img src="images/profile.webp" alt="" class="rounded-circle me-3">
+                                    </div>
+                                    <div class="avatar-content">
+                                        <h6 class="m-0 fw-bold">Jessie Samson</h6>
+                                        <p style="font-size: 14px;"><i class="fa-regular fa-comment-dots me-2 fs-6 align-middle"></i>Mentioned you in a comment<span class="d-inline" style="font-size: 11px;">&nbsp;&nbsp;10m</span></p>
+                                        <span style="font-size: 14px;"><i class="fa-solid fa-clock me-2" style="font-size: 14px;"></i><p class="d-inline-block mb-2 fw-bolder">10:20 AM</p> August 7,2021</span>
+                                    </div>
+                                </div>
+                                <div class="dots rounded-1"><i class="fa-solid fa-ellipsis"></i></div>
+                            </li>
+                            <li class="d-flex justify-content-between align-items-center px-3 pt-3 border-bottom">
+                                <div class="avatar d-flex">
+                                    <div class="image">
+                                        <img src="images/bell 3.webp" alt="" class="rounded-circle me-3">
+                                    </div>
+                                    <div class="avatar-content">
+                                        <h6 class="m-0 fw-bold">Jessie Samson</h6>
+                                        <p style="font-size: 14px;"><i class="fa-regular fa-comment-dots me-2 fs-6 align-middle"></i>Mentioned you in a comment<span class="d-inline" style="font-size: 11px;">&nbsp;&nbsp;10m</span></p>
+                                        <span style="font-size: 14px;"><i class="fa-solid fa-clock me-2" style="font-size: 14px;"></i><p class="d-inline-block mb-2 fw-bolder">10:20 AM</p> August 7,2021</span>
+                                    </div>
+                                </div>
+                                <div class="dots rounded-1"><i class="fa-solid fa-ellipsis"></i></div>
+                            </li>
+                            <li class="d-flex justify-content-between align-items-center px-3 pt-3 border-bottom">
+                                <div class="avatar d-flex">
+                                    <div class="image">
+                                        <img src="images/bell 4.webp" alt="" class="rounded-circle me-3">
+                                    </div>
+                                    <div class="avatar-content">
+                                        <h6 class="m-0 fw-bold">Jessie Samson</h6>
+                                        <p style="font-size: 14px;"><i class="fa-regular fa-comment-dots me-2 fs-6 align-middle"></i>Mentioned you in a comment<span class="d-inline" style="font-size: 11px;">&nbsp;&nbsp;10m</span></p>
+                                        <span style="font-size: 14px;"><i class="fa-solid fa-clock me-2" style="font-size: 14px;"></i><p class="d-inline-block mb-2 fw-bolder">10:20 AM</p> August 7,2021</span>
+                                    </div>
+                                </div>
+                                <div class="dots rounded-1"><i class="fa-solid fa-ellipsis"></i></div>
+                            </li>
+                        </div>
+                        <p class="py-1 m-0 text-center fw-bold"><a href="" style="font-size: 11px;">Notification history</a></p>
+                    </ul>
+                </div>
+                <div class="menu dropstart">
+                    <svg id="svgdrop" data-bs-toggle="dropdown" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="2" cy="2" r="2" fill="currentColor"></circle>
+                        <circle cx="2" cy="8" r="2" fill="currentColor"></circle>
+                        <circle cx="2" cy="14" r="2" fill="currentColor"></circle>
+                        <circle cx="8" cy="8" r="2" fill="currentColor"></circle>
+                        <circle cx="8" cy="14" r="2" fill="currentColor"></circle>
+                        <circle cx="14" cy="8" r="2" fill="currentColor"></circle>
+                        <circle cx="14" cy="14" r="2" fill="currentColor"></circle>
+                        <circle cx="8" cy="2" r="2" fill="currentColor"></circle>
+                        <circle cx="14" cy="2" r="2" fill="currentColor"></circle>
+                    </svg>
+                    <div id="style-1" class="container dropdown-menu position-absolute top-100 end-0 px-4 pt-4 mt-3 justify-content-between">
+                        <div class="row">
+                            <div class="col-4 mb-4 text-center">
+                                <a href="" class="text-decoration-none text-dark">
+                                    <img src="images/social image 1.webp" alt="" class="img-fluid" style="width: 29px;">
+                                    <span class="mt-2 fw-bold d-block" style="font-size: 10px;">Behance</span>
+                                </a>
+                            </div>
+                            <div class="col-4 mb-4 text-center">
+                                <a href="" class="text-decoration-none text-dark">
+                                    <img src="images/social image 2.webp" alt="" class="img-fluid" style="width: 29px;">
+                                    <span class="mt-2 fw-bold d-block" style="font-size: 10px;">Cloud</span>
+                                </a>
+                            </div>
+                            <div class="col-4 mb-4 text-center">
+                                <a href="" class="text-decoration-none text-dark">
+                                    <img src="images/social image 3.webp" alt="" class="img-fluid" style="width: 29px;">
+                                    <span class="mt-2 fw-bold d-block" style="font-size: 10px;">Slack</span>
+                                </a>
+                            </div>
+                            <div class="col-4 mb-4 text-center">
+                                <a href="" class="text-decoration-none text-dark">
+                                    <img src="images/social image 4.webp" alt="" class="img-fluid" style="width: 29px;">
+                                    <span class="mt-2 fw-bold d-block" style="font-size: 10px;">Github</span>
+                                </a>
+                            </div>
+                            <div class="col-4 mb-4 text-center">
+                                <a href="" class="text-decoration-none text-dark">
+                                    <img src="images/social image 5.webp" alt="" class="img-fluid" style="width: 29px;">
+                                    <span class="mt-2 fw-bold d-block" style="font-size: 10px;">BitBucket</span>
+                                </a>
+                            </div>
+                            <div class="col-4 mb-4 text-center">
+                                <a href="" class="text-decoration-none text-dark">
+                                    <img src="images/social image 6.webp" alt="" class="img-fluid" style="width: 29px;">
+                                    <span class="mt-2 fw-bold d-block" style="font-size: 10px;">Drive</span>
+                                </a>
+                            </div>
+                            <div class="col-4 mb-4 text-center">
+                                <a href="" class="text-decoration-none text-dark">
+                                    <img src="images/social image 7.webp" alt="" class="img-fluid" style="width: 29px;">
+                                    <span class="mt-2 fw-bold d-block" style="font-size: 10px;">Trello</span>
+                                </a>
+                            </div>
+                            <div class="col-4 mb-4 text-center">
+                                <a href="" class="text-decoration-none text-dark">
+                                    <img src="images/social image 8.webp" alt="" class="img-fluid" style="width: 20px;">
+                                    <span class="mt-2 fw-bold d-block" style="font-size: 10px;">Figma</span>
+                                </a>
+                            </div>
+                            <div class="col-4 mb-4 text-center">
+                                <a href="" class="text-decoration-none text-dark">
+                                    <img src="images/social image 9.webp" alt="" class="img-fluid" style="width: 29px;">
+                                    <span class="mt-2 fw-bold d-block" style="font-size: 10px;">Twitter</span>
+                                </a>
+                            </div>
+                            <div class="col-4 mb-4 text-center">
+                                <a href="" class="text-decoration-none text-dark">
+                                    <img src="images/social image 10.webp" alt="" class="img-fluid" style="width: 29px;">
+                                    <span class="mt-2 fw-bold d-block" style="font-size: 10px;">Pinterest</span>
+                                </a>
+                            </div>
+                            <div class="col-4 mb-4 text-center">
+                                <a href="" class="text-decoration-none text-dark">
+                                    <img src="images/social image 11.webp" alt="" class="img-fluid" style="width: 29px;">
+                                    <span class="mt-2 fw-bold d-block" style="font-size: 10px;">Linkedin</span>
+                                </a>
+                            </div>
+                            <div class="col-4 mb-4 text-center">
+                                <a href="" class="text-decoration-none text-dark">
+                                    <img src="images/social image 12.webp" alt="" class="img-fluid" style="width: 29px;">
+                                    <span class="mt-2 fw-bold d-block" style="font-size: 10px;">Maps</span>
+                                </a>
+                            </div>
+                            <div class="col-4 mb-4 text-center">
+                                <a href="" class="text-decoration-none text-dark">
+                                    <img src="images/social image 13.webp" alt="" class="img-fluid" style="width: 29px;">
+                                    <span class="mt-2 fw-bold d-block" style="font-size: 10px;">Photos</span>
+                                </a>
+                            </div>
+                            <div class="col-4 mb-4 text-center">
+                                <a href="" class="text-decoration-none text-dark">
+                                    <img src="images/social image 14.webp" alt="" class="img-fluid" style="width: 25px;">
+                                    <span class="mt-2 fw-bold d-block" style="font-size: 10px;">Spotify</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile dropstart">
+                    <img src="images/profile.webp" alt="" class="rounded-circle" data-bs-toggle="dropdown">
+                    <ul class="dropdown-menu list-unstyled top-100 end-0 mt-2 pt-4 pb-0 text-center">
+                        <img src="images/profile.webp" alt="" class="rounded-circle">
+                        <p class="mt-1" style="font-size: 14px;">Jerry Seinfield</p>
+                        <div class="inputs px-3">
+                            <input type="search" placeholder="Update your status" class="form-control mb-4 w-100 ps-3">
+                        </div>
+                        <ul class="list-unstyled text-start" id="style-1">
+                            <li class="ps-3 py-1 profile-middle" style="font-size: 13px;"><a href="" class="text-decoration-none text-secondary d-flex align-items-center"><i style="font-size: 16px;" class="fa-regular fa-user"></i>&nbsp;&nbsp;Profile</a></li>
+                            <li class="ps-3 py-1 profile-middle" style="font-size: 13px;"><a href="" class="text-decoration-none text-secondary d-flex align-items-center"><i style="font-size: 20px;" class="ri-pie-chart-line"></i>&nbsp;&nbsp;Dashboard</a></li>
+                            <li class="ps-3 py-1 profile-middle" style="font-size: 13px;"><a href="" class="text-decoration-none text-secondary d-flex align-items-center"><i style="font-size: 20px;" class='bx bx-lock-alt'></i>&nbsp;&nbsp;Posts and Activity</a></li>
+                            <li class="ps-3 py-1 profile-middle" style="font-size: 13px;"><a href="" class="text-decoration-none text-secondary d-flex align-items-center"><i style="font-size: 20px;" class="ri-settings-5-line"></i>&nbsp;&nbsp;Setting & Privacy</a></li>
+                            <li class="ps-3 py-1 profile-middle" style="font-size: 13px;"><a href="" class="text-decoration-none text-secondary d-flex align-items-center"><i style="font-size: 20px;" class="fa-regular fa-circle-question"></i>&nbsp;&nbsp;Help Center</a></li>
+                            <li class="ps-3 py-1 profile-middle" style="font-size: 13px;"><a href="" class="text-decoration-none text-secondary d-flex align-items-center"><i style="font-size: 20px;" class="ri-global-line"></i></i>&nbsp;&nbsp;Language</a></li>
+                        </ul>
+                        <hr class="mt-0">
+                        <li class="ps-3 py-1 profile-middle" style="font-size: 13px;"><a href="" class="text-decoration-none text-secondary d-flex align-items-center"><i style="font-size: 22px;" class='bx bx-user-plus'></i>&nbsp;&nbsp;Add Another Account</a></li>
+                        <hr>
+                        <div class="sign-btn px-3">
+                            <button class="border w-100 py-1 rounded"><a href="" class="btn w-100 p-0" style="font-size: 13px;"><i class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;&nbsp;Sign Out</a></button>
+                        </div>
+                        <div class="py-1 mb-0 d-flex align-items-center justify-content-center" style="font-size: 10px;">
+                            <li class="list-unstyled"><a href="" class="text-secondary">Privacy Policy</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <li style="list-style-type: disc;"><a href="" class="text-secondary">Terms</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <li style="list-style-type: disc;"><a href="" class="text-secondary">Cookies</a></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header class="container-fluid p-0">
+        <aside class="bg-white ps-2 border-end position-fixed" style="top: 7%; z-index: 1;">
+            <div class="left" id="style-1">
+                <div class="accordion">
+                    <div class="accordion-item border-0">
+                        <p class="accordion-header text-secondary d-flex align-items-center ps-3 py-1 mb-0 rounded" id="click" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            <i class="fa-solid fa-caret-right" id="arrow"></i>&nbsp; <i style="font-size: 20px;" class="ri-pie-chart-line"></i>&nbsp; Home
+                        </p>
+                        <div class="accordion-collapse collapse" id="collapseOne">
+                            <div class="accordion-body p-0">
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">E commerce</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Project Management</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">CRM</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Social feed</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <h6 class="ps-3 my-3 text-uppercase text-secondary fw-bold" style="font-size: 11px;">Apps</h6>
+                    <div class="accordion-item border-0">
+                        <p class="accordion-header text-secondary d-flex align-items-center ps-3 py-1 mb-0 rounded" id="OneClick" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            <i class="fa-solid fa-caret-right" id="OneArrow"></i>&nbsp; <i style="font-size: 20px;" class="ri-shopping-cart-line"></i>&nbsp; E commerce
+                        </p>
+                        <div class="accordion-collapse collapse" id="collapseTwo">
+                            <div class="accordion-body p-0">
+                                <div class="accordion-item border-0">
+                                    <p class="accordion-header text-secondary d-flex align-items-center ps-5 py-1 mb-0 rounded" id="TwoClick" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                        <i class="fa-solid fa-caret-right" id="TwoArrow"></i>&nbsp; Admin
+                                    </p>
+                                    <div class="accordion-collapse collapse" id="collapseThree">
+                                        <div class="accordion-body p-0">
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Add products</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Products</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Customers</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Customer Details</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Orders</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Order Details</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Refund</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item border-0">
+                                    <p class="accordion-header text-secondary d-flex align-items-center ps-5 py-1 mb-0 rounded" id="ThreeClick" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                        <i class="fa-solid fa-caret-right" id="ThreeArrow"></i>&nbsp; Customer
+                                    </p>
+                                    <div class="accordion-collapse collapse" id="collapseFour">
+                                        <div class="accordion-body p-0">
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Homepage</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Product details</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Product filter</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Cart</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Checkout</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Shipping info</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Profile</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Favourite store</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Wishlist</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Order Tracking</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Invoice</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0">
+                        <p class="accordion-header text-secondary d-flex align-items-center ps-3 py-1 mb-0 rounded position-relative" id="click4" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                            <i class="fa-solid fa-caret-right" id="Arrow4"></i>&nbsp; <i style="font-size: 20px;" class="ri-phone-line"></i>&nbsp; CRM <span class="position-absolute translate-middle p-1 rounded-circle badge-dot" style="left: 33%; top: 20%;">
+                                <span class="visually-hidden">New alerts</span>
+                              </span>
+                        </p>
+                        <div class="accordion-collapse collapse" id="collapseFive">
+                            <div class="accordion-body p-0">
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Analystic</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Deals <span class="badge border-1 text-uppercase">New</span></p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Deal Details</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Leads</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Lead details</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Reports</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Report details</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Add Contact</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0">
+                        <p class="accordion-header text-secondary d-flex align-items-center ps-3 py-1 mb-0 rounded" id="click5" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+                            <i class="fa-solid fa-caret-right" id="Arrow5"></i>&nbsp; <i style="font-size: 20px;" class="ri-clipboard-line"></i>&nbsp; Project Management
+                        </p>
+                        <div class="accordion-collapse collapse" id="collapseSix">
+                            <div class="accordion-body p-0">
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Creat New</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Project list view</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Project card view</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Project board view</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Todo list</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Project details</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="accordion-header text-secondary d-flex align-items-center ps-3 py-1 mb-0 rounded" id="click" data-bs-toggle="collapse">
+                        &nbsp;&nbsp;&nbsp;<i style="font-size: 20px;" class="ri-chat-4-line"></i>&nbsp; Chat
+                    </p>
+                    <div class="accordion-item border-0">
+                        <p class="accordion-header text-secondary d-flex align-items-center ps-3 py-1 mb-0 rounded" id="click6" data-bs-toggle="collapse" data-bs-target="#collapseSeven">
+                            <i class="fa-solid fa-caret-right" id="Arrow6"></i>&nbsp; <i style="font-size: 20px;" class="ri-mail-line"></i>&nbsp; Email
+                        </p>
+                        <div class="accordion-collapse collapse" id="collapseSeven">
+                            <div class="accordion-body p-0">
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Inbox</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Email details</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Compose</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0">
+                        <p class="accordion-header text-secondary d-flex align-items-center ps-3 py-1 mb-0 rounded" id="click7" data-bs-toggle="collapse" data-bs-target="#collapseEight">
+                            <i class="fa-solid fa-caret-right" id="Arrow7"></i>&nbsp; <i style="font-size: 20px;" class="ri-bookmark-line"></i>&nbsp; Events
+                        </p>
+                        <div class="accordion-collapse collapse" id="collapseEight">
+                            <div class="accordion-body p-0">
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Creat an event</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Event details</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0">
+                        <p class="accordion-header text-secondary d-flex align-items-center ps-3 py-1 mb-0 rounded" id="click8" data-bs-toggle="collapse" data-bs-target="#collapseNine">
+                            <i class="fa-solid fa-caret-right" id="Arrow8"></i>&nbsp; <i style="font-size: 20px;" class="ri-trello-line"></i>&nbsp; Kanban &nbsp;<span class="badge border-1 text-uppercase">New</span>
+                        </p>
+                        <div class="accordion-collapse collapse" id="collapseNine">
+                            <div class="accordion-body p-0">
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Kanban</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Boards</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Creat board</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0">
+                        <p class="accordion-header text-secondary d-flex align-items-center ps-3 py-1 mb-0 rounded" id="click9" data-bs-toggle="collapse" data-bs-target="#collapseTen">
+                            <i class="fa-solid fa-caret-right" id="Arrow9"></i>&nbsp; <i style="font-size: 20px;" class="ri-share-line"></i>&nbsp; Social
+                        </p>
+                        <div class="accordion-collapse collapse" id="collapseTen">
+                            <div class="accordion-body p-0">
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Profile</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Settings</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="accordion-header text-secondary d-flex align-items-center ps-3 py-1 mb-0 rounded" data-bs-toggle="collapse">
+                        &nbsp;&nbsp;&nbsp;<i style="font-size: 20px;" class="ri-calendar-line"></i>&nbsp; Calendar &nbsp;<span class="badge border-1 text-uppercase">New</span>
+                    </p>
+                    <h6 class="ps-3 my-3 text-uppercase text-secondary fw-bold" style="font-size: 11px;">Pages</h6>
+                    <p class="accordion-header text-secondary d-flex align-items-center ps-3 py-1 mb-0 rounded" id="click" data-bs-toggle="collapse">
+                        &nbsp;&nbsp;&nbsp;<i style="font-size: 20px;" class="ri-compass-line"></i>&nbsp; Starter &nbsp;<span class="badge border-1 text-uppercase">New</span>
+                    </p>
+                    <div class="accordion-item border-0">
+                        <p class="accordion-header text-secondary d-flex align-items-center ps-3 py-1 mb-0 rounded position-relative" id="click10" data-bs-toggle="collapse" data-bs-target="#collapseEle">
+                            <i class="fa-solid fa-caret-right" id="Arrow10"></i>&nbsp; <i style="font-size: 20px;" class="ri-question-line"></i>&nbsp; Faq <span class="position-absolute translate-middle p-1 rounded-circle badge-dot" style="left: 30%; top: 27%;"></span>
+                        </p>
+                        <div class="accordion-collapse collapse" id="collapseEle">
+                            <div class="accordion-body p-0">
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Faq Accordion</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Faq tab &nbsp;<span class="badge border-1 text-uppercase">New</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0">
+                        <p class="accordion-header text-secondary d-flex align-items-center ps-3 py-1 mb-0 rounded position-relative" id="click11" data-bs-toggle="collapse" data-bs-target="#collapseTwe">
+                            <i class="fa-solid fa-caret-right" id="Arrow11"></i>&nbsp; <i style="font-size: 20px;" class="ri-global-line"></i>&nbsp; Landing <span class="position-absolute translate-middle p-1 rounded-circle badge-dot" style="left: 39%; top: 27%;"></span>
+                        </p>
+                        <div class="accordion-collapse collapse" id="collapseTwe">
+                            <div class="accordion-body p-0">
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Default</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Alternate &nbsp;<span class="badge border-1 text-uppercase">New</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0">
+                        <p class="accordion-header text-secondary d-flex align-items-center ps-3 py-1 mb-0 rounded position-relative" id="click12" data-bs-toggle="collapse" data-bs-target="#collapseThirt">
+                            <i class="fa-solid fa-caret-right" id="Arrow12"></i>&nbsp; <i style="font-size: 20px;" class="ri-price-tag-3-line"></i>&nbsp; Pricing
+                        </p>
+                        <div class="accordion-collapse collapse" id="collapseThirt">
+                            <div class="accordion-body p-0">
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Pricing Column</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Pricing grid</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="accordion-header text-secondary d-flex align-items-center ps-3 py-1 mb-0 rounded" data-bs-toggle="collapse">
+                        &nbsp;&nbsp;&nbsp;<i style="font-size: 20px;" class="ri-notification-line"></i>&nbsp; Notifications
+                    </p>
+                    <p class="accordion-header text-secondary d-flex align-items-center ps-3 py-1 mb-0 rounded" id="click" data-bs-toggle="collapse">
+                        &nbsp;&nbsp;&nbsp;<i style="font-size: 20px;" class="ri-group-line"></i>&nbsp; Members
+                    </p>
+                    <p class="accordion-header text-secondary d-flex align-items-center ps-3 py-1 mb-0 rounded" id="click" data-bs-toggle="collapse">
+                        &nbsp;&nbsp;&nbsp;<i style="font-size: 20px;" class="ri-time-line"></i>&nbsp; Timeline &nbsp;<span class="badge border-1 text-uppercase">New</span>
+                    </p>
+                    <p class="accordion-header text-secondary d-flex align-items-center ps-3 py-1 mb-0 rounded" id="click" data-bs-toggle="collapse">
+                        &nbsp;&nbsp;&nbsp;<i style="font-size: 20px;" class="ri-hourglass-fill"></i>&nbsp; Coming soon &nbsp;<span class="badge border-1 text-uppercase">New</span>
+                    </p>
+                    <div class="accordion-item border-0">
+                        <p class="accordion-header text-secondary d-flex align-items-center ps-3 py-1 mb-0 rounded position-relative" id="click13" data-bs-toggle="collapse" data-bs-target="#collapse14">
+                            <i class="fa-solid fa-caret-right" id="Arrow13"></i>&nbsp; <i style="font-size: 20px;" class="ri-pie-chart-line"></i>&nbsp; Errors
+                        </p>
+                        <div class="accordion-collapse collapse" id="collapse14">
+                            <div class="accordion-body p-0">
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">403</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">404</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">500</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0">
+                        <p class="accordion-header text-secondary d-flex align-items-center ps-3 py-1 mb-0 rounded position-relative" id="click14" data-bs-toggle="collapse" data-bs-target="#collapse15">
+                            <i class="fa-solid fa-caret-right" id="Arrow14"></i>&nbsp; <i style="font-size: 20px;" class="ri-pie-chart-line"></i>&nbsp; Authentication
+                        </p>
+                        <div class="accordion-collapse collapse" id="collapse15">
+                            <div class="accordion-body p-0">
+                                <div class="accordion-item border-0">
+                                    <p class="accordion-header text-secondary d-flex align-items-center ps-5 py-1 mb-0 rounded" id="click15" data-bs-toggle="collapse" data-bs-target="#collapse16">
+                                        <i class="fa-solid fa-caret-right" id="Arrow15"></i>&nbsp; Simple
+                                    </p>
+                                    <div class="accordion-collapse collapse" id="collapse16">
+                                        <div class="accordion-body p-0">
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Sign in</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Sign up</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Sign out</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Forgot password</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Reset password</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Lock Screen</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">2FA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item border-0">
+                                    <p class="accordion-header text-secondary d-flex align-items-center ps-5 py-1 mb-0 rounded" id="click16" data-bs-toggle="collapse" data-bs-target="#collapse17">
+                                        <i class="fa-solid fa-caret-right" id="Arrow16"></i>&nbsp; Split
+                                    </p>
+                                    <div class="accordion-collapse collapse" id="collapse17">
+                                        <div class="accordion-body p-0">
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Sign in</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Sign up</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Sign out</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Forgot password</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Reset password</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Lock Screen</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">2FA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item border-0">
+                                    <p class="accordion-header text-secondary d-flex align-items-center ps-5 py-1 mb-0 rounded" id="click17" data-bs-toggle="collapse" data-bs-target="#collapse18">
+                                        <i class="fa-solid fa-caret-right" id="Arrow17"></i>&nbsp; Card
+                                    </p>
+                                    <div class="accordion-collapse collapse" id="collapse18">
+                                        <div class="accordion-body p-0">
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Sign in</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Sign up</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Sign out</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Forgot password</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Reset password</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Lock Screen</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">2FA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0">
+                        <p class="accordion-header text-secondary d-flex align-items-center ps-3 py-1 mb-0 rounded position-relative" id="click18" data-bs-toggle="collapse" data-bs-target="#collapse19">
+                            <i class="fa-solid fa-caret-right" id="Arrow18"></i>&nbsp; <i style="font-size: 20px;" class="ri-pie-chart-line"></i>&nbsp; Layouts
+                        </p>
+                        <div class="accordion-collapse collapse" id="collapse19">
+                            <div class="accordion-body p-0">
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Vertical sidenav</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Dark mode</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Sidenav collapse</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Darknav</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Topnav slim</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Navbar top slim</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Navbar top</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Horizontal slim</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Combo nav</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Combo nav slim</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Dual nav</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h6 class="ps-3 my-3 text-uppercase text-secondary fw-bold" style="font-size: 11px;">Modules</h6>
+                    <div class="accordion-item border-0">
+                        <p class="accordion-header text-secondary d-flex align-items-center ps-3 py-1 mb-0 rounded position-relative position-relative" id="click19" data-bs-toggle="collapse" data-bs-target="#collapse20">
+                            <i class="fa-solid fa-caret-right" id="Arrow19"></i>&nbsp; <i style="font-size: 20px;" class="ri-pie-chart-line"></i>&nbsp; Forms <span class="position-absolute translate-middle p-1 rounded-circle badge-dot" style="left: 36%; top: 32%;"></span>
+                        </p>
+                        <div class="accordion-collapse collapse" id="collapse20">
+                            <div class="accordion-body p-0">
+                                <div class="accordion-item border-0">
+                                    <p class="accordion-header text-secondary d-flex align-items-center ps-5 py-1 mb-0 rounded" id="click20" data-bs-toggle="collapse" data-bs-target="#collapse21">
+                                        <i class="fa-solid fa-caret-right" id="Arrow20"></i>&nbsp; Basic
+                                    </p>
+                                    <div class="accordion-collapse collapse" id="collapse21">
+                                        <div class="accordion-body p-0">
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Form Control</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Input group</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Select</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Checks</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Range</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Floating labels</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Layout</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item border-0">
+                                    <p class="accordion-header text-secondary d-flex align-items-center ps-5 py-1 mb-0 rounded" id="click21" data-bs-toggle="collapse" data-bs-target="#collapse22">
+                                        <i class="fa-solid fa-caret-right" id="Arrow21"></i>&nbsp; Advance
+                                    </p>
+                                    <div class="accordion-collapse collapse" id="collapse22">
+                                        <div class="accordion-body p-0">
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Advance select</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Date picker</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Editor</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Emoji buttons</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">File uploader</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Rating</p>
+                                            <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">2FA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Validations</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Wizard &nbsp;<span class="badge border-1 text-uppercase">New</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0">
+                        <p class="accordion-header text-secondary d-flex align-items-center ps-3 py-1 mb-0 rounded position-relative" id="click22" data-bs-toggle="collapse" data-bs-target="#collapse23">
+                            <i class="fa-solid fa-caret-right" id="Arrow22"></i>&nbsp; <i style="font-size: 20px;" class="ri-pie-chart-line"></i>&nbsp; Icons
+                        </p>
+                        <div class="accordion-collapse collapse" id="collapse23">
+                            <div class="accordion-body p-0">
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Feather</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Font Awesome</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Unicons</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0">
+                        <p class="accordion-header text-secondary d-flex align-items-center ps-3 py-1 mb-0 rounded position-relative" id="click23" data-bs-toggle="collapse" data-bs-target="#collapse24">
+                            <i class="fa-solid fa-caret-right" id="Arrow23"></i>&nbsp; <i style="font-size: 20px;" class="ri-pie-chart-line"></i>&nbsp; Tables
+                        </p>
+                        <div class="accordion-collapse collapse" id="collapse24">
+                            <div class="accordion-body p-0">
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Basic tables</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Advance tables</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0">
+                        <p class="accordion-header text-secondary d-flex align-items-center ps-3 py-1 mb-0 rounded position-relative" id="click24" data-bs-toggle="collapse" data-bs-target="#collapse25">
+                            <i class="fa-solid fa-caret-right" id="Arrow24"></i>&nbsp; <i style="font-size: 20px;" class="ri-pie-chart-line"></i>&nbsp; Charts
+                        </p>
+                        <div class="accordion-collapse collapse" id="collapse25">
+                            <div class="accordion-body p-0">
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">EChart</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Gantt chart</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0">
+                        <p class="accordion-header text-secondary d-flex align-items-center ps-3 py-1 mb-0 rounded position-relative" id="click25" data-bs-toggle="collapse" data-bs-target="#collapse26">
+                            <i class="fa-solid fa-caret-right" id="Arrow25"></i>&nbsp; <i style="font-size: 20px;" class="ri-pie-chart-line"></i>&nbsp; Components
+                        </p>
+                        <div class="accordion-collapse collapse" id="collapse26">
+                            <div class="accordion-body p-0">
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Vertical sidenav</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Dark mode</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Sidenav collapse</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Darknav</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Topnav slim</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Navbar top slim</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Navbar top</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Horizontal slim</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Combo nav</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Combo nav slim</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Dual nav</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0">
+                        <p class="accordion-header text-secondary d-flex align-items-center ps-3 py-1 mb-0 rounded position-relative" id="click26" data-bs-toggle="collapse" data-bs-target="#collapse27">
+                            <i class="fa-solid fa-caret-right" id="Arrow26"></i>&nbsp; <i style="font-size: 20px;" class="ri-pie-chart-line"></i>&nbsp; Utilities
+                        </p>
+                        <div class="accordion-collapse collapse" id="collapse27">
+                            <div class="accordion-body p-0">
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Vertical sidenav</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Dark mode</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Sidenav collapse</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Darknav</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Topnav slim</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Navbar top slim</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Navbar top</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Horizontal slim</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Combo nav</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Combo nav slim</p>
+                                <p class="rounded ps-5 py-1 mb-0 ms-4 text-secondary">Dual nav</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h6 class="ps-3 my-3 text-uppercase text-secondary fw-bold" style="font-size: 11px;">Documentation</h6>
+                    <p class="accordion-header text-secondary d-flex align-items-center ps-3 py-1 mb-0 rounded" id="click" data-bs-toggle="collapse">
+                        &nbsp;&nbsp;&nbsp;<i style="font-size: 20px;" class="ri-pie-chart-line"></i>&nbsp; Getting started
+                    </p>
+                    <p class="accordion-header text-secondary d-flex align-items-center ps-3 py-1 mb-0 rounded" id="click" data-bs-toggle="collapse">
+                        &nbsp;&nbsp;&nbsp;<i style="font-size: 20px;" class="ri-pie-chart-line"></i>&nbsp; Customization
+                    </p>
+                    <p class="accordion-header text-secondary d-flex align-items-center ps-3 py-1 mb-0 rounded" id="click" data-bs-toggle="collapse">
+                        &nbsp;&nbsp;&nbsp;<i style="font-size: 20px;" class="ri-pie-chart-line"></i>&nbsp; Desing file
+                    </p>
+                    <p class="accordion-header text-secondary d-flex align-items-center ps-3 py-1 mb-0 rounded" id="click" data-bs-toggle="collapse">
+                        &nbsp;&nbsp;&nbsp;<i style="font-size: 20px;" class="ri-pie-chart-line"></i>&nbsp; Changelog
+                    </p>
+                    <p class="accordion-header text-secondary d-flex align-items-center ps-3 py-1 mb-0 rounded" id="click" data-bs-toggle="collapse">
+                        &nbsp;&nbsp;&nbsp;<i style="font-size: 20px;" class="ri-pie-chart-line"></i>&nbsp; Migrations
+                    </p>
+                    <p class="accordion-header text-secondary d-flex align-items-center ps-3 py-1 mb-0 rounded" id="click" data-bs-toggle="collapse">
+                        &nbsp;&nbsp;&nbsp;<i style="font-size: 20px;" class="ri-pie-chart-line"></i>&nbsp; Showcase
+                    </p>
+                </div>
+            </div>
+        </aside>
+        <section>
+            <div class="row dashboard m-0">
+                <h2 class="ps-2 fw-bold">Ecommerce Dashboard</h2>
+                <div class="col-lg-6 p-4 ps-2">
+                    <div id="chart_div" style="height: 400px; width:100%;max-width:700px; box-shadow: 0px 0px 10px rgba(202, 202, 202, 0.509);"></div>
+                </div>
+                <div class="col-lg-6 p-4 ps-2">
+                    <canvas class="p-4 ps-2" id="meraChart" style="height: 400px; width:100%;max-width:700px; box-shadow: 0px 0px 10px rgba(202, 202, 202, 0.509);"></canvas>
+                </div>
+                <div class="col-lg-6 p-4 ps-2">
+                    <canvas class="p-4 ps-2" id="teraChart" style="height: 400px; width:100%;max-width:700px; box-shadow: 0px 0px 10px rgba(202, 202, 202, 0.509);"></canvas>
+                </div>
+                <div class="col-lg-6 p-4 ps-2">
+                    <canvas class="p-4 ps-2" id="sabakaChart" style="height: 400px; width:100%;max-width:700px; box-shadow: 0px 0px 10px rgba(202, 202, 202, 0.509);"></canvas>
+                </div>
+            </div>
+            <main>
+                <div class="row m-0 align-items-center mb-3">
+                    <div class="col-lg-5 me-5">
+                        <h3 class="text-dark m-0 fw-bold">Latest Reviews</h3>
+                        <p class="text-dark m-0">Payment received across all channels</p>
+                    </div>
+                    <div class="col-lg-6 d-flex justify-content-end pe-0">
+                        <div class="search d-flex align-items-center justify-content-between form-control w-50 me-3">
+                            <i class="fa-solid fa-magnifying-glass me-2"></i><input type="search" class="border-0 w-100">
+                        </div>
+                        <button class="btn me-3 px-4" style="border: 1px solid rgba(172, 172, 172, 0.821);">All Products</button>
+                        <button class="btn px-3 dropdown" style="border: 1px solid rgba(172, 172, 172, 0.821);">
+                            <i class="fa-solid fa-ellipsis" data-bs-toggle="dropdown"></i>
+                            <ul class="list-unstyled dropdown-menu">
+                                <li class="dropdown-item">Action</li>
+                                <li class="dropdown-item">Another Action</li>
+                                <li class="dropdown-item">Something else</li>
+                            </ul>
+                        </button>
+                    </div>
+                </div>
+                <table style="width: 1500px;">
+                    <tr class="border-bottom border-top">
+                        <th class="py-2 px-3" style="width: 20px;">
+                            <input type="checkbox" name="" id="">
+                        </th>
+                        <th style="width: 50px;"></th>
+                        <th class="p-2 px-3" style="width: 300px;">
+                            <h6 class="text-uppercase fw-bold m-0 align-middle" style="font-size: 13px;">Products</h6>
+                        </th>
+                        <th class="p-2 px-3" style="width: 200px;">
+                            <h6 class="text-uppercase fw-bold m-0" style="font-size: 13px;">Customer</h6>
+                        </th>
+                        <th class="p-2 px-3" style="width: 100px;">
+                            <h6 class="text-uppercase fw-bold m-0" style="font-size: 13px;">Rating</h6>
+                        </th>
+                        <th class="p-2 px-1" style="width: 400px;">
+                            <h6 class="text-uppercase fw-bold m-0" style="font-size: 13px;">Review</h6>
+                        </th>
+                        <th class="p-2 px-3" style="width: 150px;">
+                            <h6 class="text-uppercase fw-bold m-0" style="font-size: 13px;">Status</h6>
+                        </th>
+                        <th class="p-2 px-3 text-center" style="width: 100px;">
+                            <h6 class="text-uppercase fw-bold m-0" style="font-size: 13px;">Time</h6>
+                        </th>
+                        <th style="width: 50px;"></th>
+                    </tr>
+                    <tr class="border-bottom border-top">
+                        <td class="py-2 px-3" style="width: 20px;">
+                            <input type="checkbox" name="" id="">
+                        </td>
+                        <td class="py-2" style="width: 50px;">
+                            <img src="images/review 1.png" alt="" class="img-thumbnail w-100">
+                        </td>
+                        <td class="px-2 px-3" style="width: 300px;">
+                            <p class="mb-0" style="font-size: 15px;"><a href="" class="text-decoration-none">Fitbit Sense Advanced Smartwatch witd Tools</a></p>
+                        </td>
+                        <td class="px-3" style="width: 200px;">
+                            <div class="info d-flex align-items-center">
+                                <div class="letter align-middle me-3">
+                                    <span class="fs-4 fw-bold text-primary">R</span>
+                                </div>
+                                <div class="name">
+                                    <span>Richard Dawkins</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-3" style="width: 100px;">
+                            <div class="ratting">
+                                <i class="fa-solid fa-star" style="font-size: 10px; color: var(--bs-orange); "></i>
+                                <i class="fa-solid fa-star" style="font-size: 10px; color: var(--bs-orange); "></i>
+                                <i class="fa-solid fa-star" style="font-size: 10px; color: var(--bs-orange); "></i>
+                                <i class="fa-solid fa-star" style="font-size: 10px; color: var(--bs-orange); "></i>
+                                <i class="fa-solid fa-star" style="font-size: 10px; color: var(--bs-orange); "></i>
+                            </div>
+                        </td>
+                        <td class="px-1" style="width: 400px;">
+                            <h6 class="text-uppercase m-0 fw-bold" style="font-size: 10px; line-height: 15px;">This Fitbit is fantastic! I was trying to be in better shape and needed some motivation, so I decided to treat myself to a new Fitbit.</h6>
+                        </td>
+                        <td class="px-3" style="width: 150px;">
+                            <span class="badge text-uppercase" style="color: var(--badge-color);">Approved <i class="fa-solid fa-check"></i></span>
+                        </td>
+                        <td class="px-3 text-center" style="width: 100px;">
+                            <h6 class="fw-bold m-0" style="font-size: 13px;">Just now</h6>
+                        </td>
+                        <td class="text-center" style="width: 50px;">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </td>
+                    </tr>
+                    <tr class="border-bottom border-top">
+                        <td class="py-2 px-3" style="width: 20px;">
+                            <input type="checkbox" name="" id="">
+                        </td>
+                        <td class="py-2" style="width: 50px;">
+                            <img src="images/review 2.png" alt="" class="img-thumbnail w-100">
+                        </td>
+                        <td class="px-2 px-3" style="width: 300px;">
+                            <p class="mb-0" style="font-size: 15px;"><a href="" class="text-decoration-none">Fitbit Sense Advanced Smartwatch witd Tools</a></p>
+                        </td>
+                        <td class="px-3" style="width: 200px;">
+                            <div class="info d-flex align-items-center">
+                                <div class="letter align-middle me-3">
+                                    <span class="fs-4 fw-bold text-primary"><img src="images/bell 3.webp" alt="" class="rounded-circle"></span>
+                                </div>
+                                <div class="name">
+                                    <span>Ashley Garrett</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-3" style="width: 100px;">
+                            <div class="ratting">
+                                <i class="fa-solid fa-star" style="font-size: 10px; color: var(--bs-orange);"></i>
+                                <i class="fa-solid fa-star" style="font-size: 10px; color: var(--bs-orange);"></i>
+                                <i class="fa-solid fa-star" style="font-size: 10px; color: var(--bs-orange);"></i>
+                                <i class="fa-regular fa-star" style="font-size: 10px; color: var(--bs-orange);"></i>
+                                <i class="fa-regular fa-star" style="font-size: 10px; color: var(--bs-orange);"></i>
+                            </div>
+                        </td>
+                        <td class="px-1" style="width: 400px;">
+                            <h6 class="text-uppercase m-0 fw-bold" style="font-size: 10px; line-height: 15px;">The order was delivered ahead of schedule. To give us additional time, you should leave the packaging sealed with plastic.</h6>
+                        </td>
+                        <td class="px-3" style="width: 150px;">
+                            <span class="badge text-uppercase" style="color: var(--badge-color);">Approved <i class="fa-solid fa-check"></i></span>
+                        </td>
+                        <td class="px-3 text-center" style="width: 100px;">
+                            <h6 class="fw-bold m-0" style="font-size: 13px;">Just now</h6>
+                        </td>
+                        <td class="text-center" style="width: 50px;">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </td>
+                    </tr>
+                    <tr class="border-bottom border-top">
+                        <td class="py-2 px-3" style="width: 20px;">
+                            <input type="checkbox" name="" id="">
+                        </td>
+                        <td class="py-2" style="width: 50px;">
+                            <img src="images/review 3.png" alt="" class="img-thumbnail w-100">
+                        </td>
+                        <td class="px-2 px-3" style="width: 300px;">
+                            <p class="mb-0" style="font-size: 15px;"><a href="" class="text-decoration-none">Fitbit Sense Advanced Smartwatch witd Tools</a></p>
+                        </td>
+                        <td class="px-3" style="width: 200px;">
+                            <div class="info d-flex align-items-center">
+                                <div class="letter align-middle me-3">
+                                    <span class="fs-4 fw-bold text-primary"><img src="images/bell 4.webp" alt="" class="rounded-circle"></span>
+                                </div>
+                                <div class="name">
+                                    <span>Woodrow Burton</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-3" style="width: 100px;">
+                            <div class="ratting">
+                                <i class="fa-solid fa-star" style="font-size: 10px; color: var(--bs-orange);"></i>
+                                <i class="fa-solid fa-star" style="font-size: 10px; color: var(--bs-orange);"></i>
+                                <i class="fa-solid fa-star" style="font-size: 10px; color: var(--bs-orange);"></i>
+                                <i class="fa-solid fa-star" style="font-size: 10px; color: var(--bs-orange);"></i>
+                                <i class="fa-regular fa-star" style="font-size: 10px; color: var(--bs-orange);"></i>
+                            </div>
+                        </td>
+                        <td class="px-1" style="width: 400px;">
+                            <h6 class="text-uppercase m-0 fw-bold" style="font-size: 10px; line-height: 15px;">It's a Mac, after all. Once you've gone Mac, there's no going back. My first Mac lasted over nine years, and this is my second.</h6>
+                        </td>
+                        <td class="px-3" style="width: 150px;">
+                            <span class="badge text-uppercase" style="color: var(--pen-badge-color); border: 1px solid var(--pen-borderbadge); background-color: var(--pen-bgbadage);">Pending <i class="fa-regular fa-clock"></i></span>
+                        </td>
+                        <td class="px-3 text-center" style="width: 100px;">
+                            <h6 class="fw-bold m-0" style="font-size: 13px;">Just now</h6>
+                        </td>
+                        <td class="text-center" style="width: 50px;">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </td>
+                    </tr>
+                    <tr class="border-bottom border-top">
+                        <td class="py-2 px-3" style="width: 20px;">
+                            <input type="checkbox" name="" id="">
+                        </td>
+                        <td class="py-2" style="width: 50px;">
+                            <img src="images/review 4.png" alt="" class="img-thumbnail w-100">
+                        </td>
+                        <td class="px-2 px-3" style="width: 300px;">
+                            <p class="mb-0" style="font-size: 15px;"><a href="" class="text-decoration-none">Fitbit Sense Advanced Smartwatch witd Tools</a></p>
+                        </td>
+                        <td class="px-3" style="width: 200px;">
+                            <div class="info d-flex align-items-center">
+                                <div class="letter align-middle me-3">
+                                    <span class="fs-4 fw-bold text-primary"><img src="images/bell 2.webp" alt="" class="rounded-circle"></span>
+                                </div>
+                                <div class="name">
+                                    <span>Eric McGee</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-3" style="width: 100px;">
+                            <div class="ratting">
+                                <i class="fa-solid fa-star" style="font-size: 10px; color: var(--bs-orange);"></i>
+                                <i class="fa-solid fa-star" style="font-size: 10px; color: var(--bs-orange);"></i>
+                                <i class="fa-solid fa-star" style="font-size: 10px; color: var(--bs-orange);"></i>
+                                <i class="fa-regular fa-star" style="font-size: 10px; color: var(--bs-orange);"></i>
+                                <i class="fa-regular fa-star" style="font-size: 10px; color: var(--bs-orange);"></i>
+                            </div>
+                        </td>
+                        <td class="px-1" style="width: 400px;">
+                            <h6 class="text-uppercase m-0 fw-bold" style="font-size: 10px; line-height: 15px;">Personally, I like the minimalist style, but I wouldn't choose it if I were searching for a computer that I would use frequently..</h6>
+                        </td>
+                        <td class="px-3" style="width: 150px;">
+                            <span class="badge text-uppercase" style="color: var(--pen-badge-color); border: 1px solid var(--pen-borderbadge); background-color: var(--pen-bgbadage);">Pending <i class="fa-regular fa-clock"></i></span>
+                        </td>
+                        <td class="px-3 text-center" style="width: 100px;">
+                            <h6 class="fw-bold m-0" style="font-size: 13px;">Just now</h6>
+                        </td>
+                        <td class="text-center" style="width: 50px;">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </td>
+                    </tr>
+                    <tr class="border-bottom border-top">
+                        <td class="py-2 px-3" style="width: 20px;">
+                            <input type="checkbox" name="" id="">
+                        </td>
+                        <td class="py-2" style="width: 50px;">
+                            <img src="images/review 5.png" alt="" class="img-thumbnail w-100">
+                        </td>
+                        <td class="px-2 px-3" style="width: 300px;">
+                            <p class="mb-0" style="font-size: 15px;"><a href="" class="text-decoration-none">Fitbit Sense Advanced Smartwatch witd Tools</a></p>
+                        </td>
+                        <td class="px-3" style="width: 200px;">
+                            <div class="info d-flex align-items-center">
+                                <div class="letter align-middle me-3">
+                                    <span class="fs-4 fw-bold text-primary"><img src="images/bell 2.webp" alt="" class="rounded-circle"></span>
+                                </div>
+                                <div class="name">
+                                    <span>Kim Carroll</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-3" style="width: 100px;">
+                            <div class="ratting">
+                                <i class="fa-solid fa-star" style="font-size: 10px; color: var(--bs-orange);"></i>
+                                <i class="fa-solid fa-star" style="font-size: 10px; color: var(--bs-orange);"></i>
+                                <i class="fa-solid fa-star" style="font-size: 10px; color: var(--bs-orange);"></i>
+                                <i class="fa-solid fa-star" style="font-size: 10px; color: var(--bs-orange);"></i>
+                                <i class="fa-regular fa-star" style="font-size: 10px; color: var(--bs-orange);"></i>
+                            </div>
+                        </td>
+                        <td class="px-1" style="width: 400px;">
+                            <h6 class="text-uppercase m-0 fw-bold" style="font-size: 10px; line-height: 15px;">Personally, I like the minimalist style, but I wouldn't choose it if I were searching for a computer that I would use frequently..</h6>
+                        </td>
+                        <td class="px-3" style="width: 150px;">
+                            <span class="badge text-uppercase" style="color: var(--pen-badge-color); border: 1px solid var(--pen-borderbadge); background-color: var(--pen-bgbadage);">Pending <i class="fa-regular fa-clock"></i></span>
+                        </td>
+                        <td class="px-3 text-center" style="width: 100px;">
+                            <h6 class="fw-bold m-0" style="font-size: 13px;">Just now</h6>
+                        </td>
+                        <td class="text-center" style="width: 50px;">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </td>
+                    </tr>
+                    <tr class="border-bottom border-top">
+                        <td class="py-2 px-3" style="width: 20px;">
+                            <input type="checkbox" name="" id="">
+                        </td>
+                        <td class="py-2" style="width: 50px;">
+                            <img src="images/review 6.png" alt="" class="img-thumbnail w-100">
+                        </td>
+                        <td class="px-2 px-3" style="width: 300px;">
+                            <p class="mb-0" style="font-size: 15px;"><a href="" class="text-decoration-none">Fitbit Sense Advanced Smartwatch witd Tools</a></p>
+                        </td>
+                        <td class="px-3" style="width: 200px;">
+                            <div class="info d-flex align-items-center">
+                                <div class="letter align-middle me-3">
+                                    <span class="fs-4 fw-bold text-primary"><img src="images/profile.webp" alt="" class="rounded-circle"></span>
+                                </div>
+                                <div class="name">
+                                    <span>Barbara Lucas</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-3" style="width: 100px;">
+                            <div class="ratting">
+                                <i class="fa-solid fa-star" style="font-size: 10px; color: var(--bs-orange);"></i>
+                                <i class="fa-solid fa-star" style="font-size: 10px; color: var(--bs-orange);"></i>
+                                <i class="fa-solid fa-star" style="font-size: 10px; color: var(--bs-orange);"></i>
+                                <i class="fa-regular fa-star" style="font-size: 10px; color: var(--bs-orange);"></i>
+                                <i class="fa-regular fa-star" style="font-size: 10px; color: var(--bs-orange);"></i>
+                            </div>
+                        </td>
+                        <td class="px-1" style="width: 400px;">
+                            <h6 class="text-uppercase m-0 fw-bold" style="font-size: 10px; line-height: 15px;">The order was delivered ahead of schedule. To give us additional time, you should leave the packaging sealed with plastic.</h6>
+                        </td>
+                        <td class="px-3" style="width: 150px;">
+                            <span class="badge text-uppercase" style="color: var(--badge-color);">Approved <i class="fa-solid fa-check"></i></span>
+                        </td>
+                        <td class="px-3 text-center" style="width: 100px;">
+                            <h6 class="fw-bold m-0" style="font-size: 13px;">Just now</h6>
+                        </td>
+                        <td class="text-center" style="width: 50px;">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </td>
+                    </tr>
+                </table>
+            </main>
+            <figure class="mt-5 border-top border-bottom ps-2">
+                <div class="container-fluid p-0 ps-3">
+                    <div class="row m-0">
+                        <div class="col-lg-6 p-0 px-4  pt-4">
+                            <h3 class="mb-0 fw-bold">Top regions by revenue</h3>
+                            <p>Where you generated most of the revenue</p>
+                            <table style="width: 740px;">
+                                <tr class="border-top border-bottom">
+                                    <th class="py-1" style="width: 190px; font-size: 13px;">Country</th>
+                                    <th class="py-1" style="width: 80px; font-size: 13px;">users</th>
+                                    <th class="py-1 text-center" style="width: 160px; font-size: 13px;">Transactions</th>
+                                    <th class="py-1 text-center" style="width: 80px; font-size: 13px;">Revenue</th>
+                                    <th class="py-1 text-end" style="width: 40px; font-size: 13px;">Conv.Rate</th>
+                                </tr>
+                                <tr class="border-bottom">
+                                    <td class="py-4" style="width: 190px; font-size: 13px;"></td>
+                                    <td class="py-4" style="width: 80px; font-size: 22px;">377,620</td>
+                                    <td class="py-4 text-center" style="width: 160px; font-size: 22px;">236</td>
+                                    <td class="py-4 text-center" style="width: 80px; font-size: 22px;">$15,758</td>
+                                    <td class="py-4 text-end" style="width: 40px; font-size: 22px;">10.32%</td>
+                                </tr>
+                                <tr class="border-bottom">
+                                    <td class="py-3" style="width: 190px; font-size: 13px;">1. <a href="" class="ms-2 text-decoration-none fw-bold"><img src="images/flag 1.png" alt="" class="me-3">India</a></td>
+                                    <td class="py-3" style="width: 80px; font-size: 13px;"><span class="fw-bold">92896</span> &nbsp; (41.6%)</td>
+                                    <td class="py-3 text-center" style="width: 160px; font-size: 13px;"><span class="fw-bold">67</span> &nbsp; (34.3%)</td>
+                                    <td class="py-3 text-center" style="width: 80px; font-size: 13px;"><span class="fw-bold">7560</span> &nbsp; (36.9%)</td>
+                                    <th class="py-3 text-end" style="width: 40px; font-size: 13px;">14.01%</th>
+                                </tr>
+                                <tr class="border-bottom">
+                                    <td class="py-3" style="width: 190px; font-size: 13px;">2. <a href="" class="ms-2 text-decoration-none fw-bold"><img src="images/flag 2.png" alt="" class="me-3">China</a></td>
+                                    <td class="py-3" style="width: 80px; font-size: 13px;"><span class="fw-bold">50496</span> &nbsp; (32.8%)</td>
+                                    <td class="py-3 text-center" style="width: 160px; font-size: 13px;"><span class="fw-bold">54</span> &nbsp; (23.8%)</td>
+                                    <td class="py-3 text-center" style="width: 80px; font-size: 13px;"><span class="fw-bold">6532</span> &nbsp; (26.5%)</td>
+                                    <th class="py-3 text-end" style="width: 40px; font-size: 13px;">23.56%</th>
+                                </tr>
+                                <tr class="border-bottom">
+                                    <td class="py-3" style="width: 190px; font-size: 13px;">3. <a href="" class="ms-2 text-decoration-none fw-bold"><img src="images/flag 3.png" alt="" class="me-3">USA</a></td>
+                                    <td class="py-3" style="width: 80px; font-size: 13px;"><span class="fw-bold">45679</span> &nbsp; (24.3%)</td>
+                                    <td class="py-3 text-center" style="width: 160px; font-size: 13px;"><span class="fw-bold">35</span> &nbsp; (19.7%)</td>
+                                    <td class="py-3 text-center" style="width: 80px; font-size: 13px;"><span class="fw-bold">5432</span> &nbsp; (16.9%)</td>
+                                    <th class="py-3 text-end" style="width: 40px; font-size: 13px;">10.23%</th>
+                                </tr>
+                                <tr class="border-bottom">
+                                    <td class="py-3" style="width: 190px; font-size: 13px;">4. <a href="" class="ms-2 text-decoration-none fw-bold"><img src="images/flag 4.png" alt="" class="me-3">South Korea</a></td>
+                                    <td class="py-3" style="width: 80px; font-size: 13px;"><span class="fw-bold">36453</span> &nbsp; (19.7%)</td>
+                                    <td class="py-3 text-center" style="width: 160px; font-size: 13px;"><span class="fw-bold">22</span> &nbsp; (9.54%)</td>
+                                    <td class="py-3 text-center" style="width: 80px; font-size: 13px;"><span class="fw-bold">4673</span> &nbsp; (11.6%)</td>
+                                    <th class="py-3 text-end" style="width: 40px; font-size: 13px;">8.85%</th>
+                                </tr>
+                                <tr>
+                                    <td class="py-3" style="width: 190px; font-size: 13px;">5. <a href="" class="ms-2 text-decoration-none fw-bold"><img src="images/flag 5.png" alt="" class="me-3">Vietnam</a></td>
+                                    <td class="py-3" style="width: 80px; font-size: 13px;"><span class="fw-bold">15007</span> &nbsp; (11.7%)</td>
+                                    <td class="py-3 text-center" style="width: 160px; font-size: 13px;"><span class="fw-bold">17</span> &nbsp; (6.91%)</td>
+                                    <td class="py-3 text-center" style="width: 80px; font-size: 13px;"><span class="fw-bold">2456</span> &nbsp; (10.2%)</td>
+                                    <th class="py-3 text-end" style="width: 40px; font-size: 13px;">6.01%</th>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-lg-6 p-0 ps-1">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15281523.952038161!2d72.10863842602201!3d20.75724541214978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1705417155454!5m2!1sen!2sin" class="w-100" height="460" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </figure>
+            <article>
+                <div class="conatainer">
+                    <div class="row m-0">
+                        <div class="col-lg-6 p-4 ps-2">
+                            <h3 class="ps-2 mb-0 fw-bold">Projection vs actual</h3>
+                            <p class="ps-2 mb-5">Actual earnings vs projected earnings</p>
+                            <canvas class="p-4" id="myChart" style="height: 400px; width:100%;max-width:700px; box-shadow: 0px 0px 10px rgba(202, 202, 202, 0.509);"></canvas>
+                        </div>
+                        <div class="col-lg-6 p-4 ps-2">
+                            <h3 class="ps-2 mb-0 fw-bold">Returning customer rate</h3>
+                            <p class="ps-2 mb-5">Rate of customers returning to your shop over time</p>
+                            <canvas class="p-4" id="Chart-2" style="height: 400px; width:100%;max-width:700px; box-shadow: 0px 0px 10px rgba(202, 202, 202, 0.509);"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <footer class="border-top ps-5 py-3">
+                <h6 class="mb-0">Thank you for creating with Phoenix React | 2024 </h6>
+            </footer>
+        </section>
+    </header>
+    <!-- JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $("#click").click(function(){
+                $("#arrow").toggleClass("active");
+            })
+        })
+        $(document).ready(function(){
+            $("#OneClick").click(function(){
+                $("#OneArrow").toggleClass("active");
+            })
+        })
+        $(document).ready(function(){
+            $("#TwoClick").click(function(){
+                $("#TwoArrow").toggleClass("active");
+            })
+        })
+        $(document).ready(function(){
+            $("#ThreeClick").click(function(){
+                $("#ThreeArrow").toggleClass("active");
+            })
+        })
+        $(document).ready(function(){
+            $("#click4").click(function(){
+                $("#Arrow4").toggleClass("active");
+            })
+        })
+        $(document).ready(function(){
+            $("#click5").click(function(){
+                $("#Arrow5").toggleClass("active");
+            })
+        })
+        $(document).ready(function(){
+            $("#click6").click(function(){
+                $("#Arrow6").toggleClass("active");
+            })
+        })
+        $(document).ready(function(){
+            $("#click7").click(function(){
+                $("#Arrow7").toggleClass("active");
+            })
+        })
+        $(document).ready(function(){
+            $("#click8").click(function(){
+                $("#Arrow8").toggleClass("active");
+            })
+        })
+        $(document).ready(function(){
+            $("#click9").click(function(){
+                $("#Arrow9").toggleClass("active");
+            })
+        })
+        $(document).ready(function(){
+            $("#click10").click(function(){
+                $("#Arrow10").toggleClass("active");
+            })
+        })
+        $(document).ready(function(){
+            $("#click11").click(function(){
+                $("#Arrow11").toggleClass("active");
+            })
+        })
+        $(document).ready(function(){
+            $("#click12").click(function(){
+                $("#Arrow12").toggleClass("active");
+            })
+        })
+        $(document).ready(function(){
+            $("#click13").click(function(){
+                $("#Arrow13").toggleClass("active");
+            })
+        })
+        $(document).ready(function(){
+            $("#click14").click(function(){
+                $("#Arrow14").toggleClass("active");
+            })
+        })
+        $(document).ready(function(){
+            $("#click15").click(function(){
+                $("#Arrow15").toggleClass("active");
+            })
+        })
+        $(document).ready(function(){
+            $("#click16").click(function(){
+                $("#Arrow16").toggleClass("active");
+            })
+        })
+        $(document).ready(function(){
+            $("#click17").click(function(){
+                $("#Arrow17").toggleClass("active");
+            })
+        })
+        $(document).ready(function(){
+            $("#click18").click(function(){
+                $("#Arrow18").toggleClass("active");
+            })
+        })
+        $(document).ready(function(){
+            $("#click19").click(function(){
+                $("#Arrow19").toggleClass("active");
+            })
+        })
+        $(document).ready(function(){
+            $("#click20").click(function(){
+                $("#Arrow20").toggleClass("active");
+            })
+        })
+        $(document).ready(function(){
+            $("#click21").click(function(){
+                $("#Arrow21").toggleClass("active");
+            })
+        })
+        $(document).ready(function(){
+            $("#click22").click(function(){
+                $("#Arrow22").toggleClass("active");
+            })
+        })
+        $(document).ready(function(){
+            $("#click23").click(function(){
+                $("#Arrow23").toggleClass("active");
+            })
+        })
+        $(document).ready(function(){
+            $("#click24").click(function(){
+                $("#Arrow24").toggleClass("active");
+            })
+        })
+        $(document).ready(function(){
+            $("#click25").click(function(){
+                $("#Arrow25").toggleClass("active");
+            })
+        })
+        $(document).ready(function(){
+            $("#click26").click(function(){
+                $("#Arrow26").toggleClass("active");
+            })
+        })
+        $(document).ready(function(){
+            $("#menu").click(function(){
+                $("aside").toggleClass("left");
+            })
+        })
+
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>

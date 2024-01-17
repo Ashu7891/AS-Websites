@@ -1,0 +1,188 @@
+:root{
+  --badge-color: #1c6c09;
+  --badge-bgcolor:  #d9fbd0;
+  --badge-bordercolor: #bee8b4;
+  --pen-badge-color: #bc3803;
+  --pen-bgbadage: #ffefca;
+  --pen-borderbadge: #ffcc85;
+}
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Nunito Sans";
+}
+nav {
+  border-bottom: 1px solid rgba(136, 136, 136, 0.562);
+}
+nav a img {
+  width: 35px;
+}
+nav .form-control input {
+  outline: none;
+}
+nav .bell ul {
+  width: 380px;
+}
+nav .bell .dots {
+  border: 1px solid rgba(128, 128, 128, 0);
+  padding: 4px 10px;
+}
+nav .bell .dots:hover {
+  border: 1px solid rgba(147, 147, 147, 0.484);
+}
+nav .bell .avatar img {
+  background-color: #e3e6ed;
+}
+nav .bell ul li:nth-child(2),
+nav .bell ul li:nth-child(3),
+nav .bell ul li:nth-child(4),
+nav .bell ul li:nth-child(5),
+nav .bell ul li:nth-child(6) {
+  background-color: #eff2f6;
+}
+nav .bell ul li:hover {
+  background-color: #e3e6ed;
+}
+nav .menu .container {
+  width: 250px;
+  height: 290px;
+  overflow: auto;
+}
+nav .profile ul {
+  width: 250px;
+}
+nav .profile ul input::placeholder {
+  font-size: 13px;
+}
+nav .profile ul .profile-middle:hover {
+  background-color: rgba(223, 223, 223, 0.459);
+}
+nav .profile .dropdown-menu ul {
+  height: 165px;
+  overflow: auto;
+}
+nav .bell .slide {
+  height: 430px;
+  overflow: auto;
+}
+#style-1::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(173, 173, 173, 0.209);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+#style-1::-webkit-scrollbar {
+  width: 6px;
+  background-color: #f5f5f5;
+}
+#style-1::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(202, 202, 202, 0.229);
+  background-color: #ccccccd1;
+}
+header {
+  width: 100%;
+}
+header aside {
+  width: 15%;
+  padding-top: 0.5%;
+}
+header aside p {
+  font-size: 13px;
+}
+header aside p .badge {
+  background-color: #c7ebff;
+  color: #005585;
+}
+header aside p .badge-dot {
+  background-color: #0097eb;
+}
+header aside p:hover {
+  background-color: rgba(183, 193, 197, 0.423);
+  transition: all 0.5s;
+}
+header .accordion-header #arrow.active,
+header .accordion-header #OneArrow.active,
+header .accordion-header #TwoArrow.active,
+header .accordion-header #ThreeArrow.active,
+header .accordion-header #Arrow4.active,
+header .accordion-header #Arrow5.active,
+header .accordion-header #Arrow6.active,
+header .accordion-header #Arrow7.active,
+header .accordion-header #Arrow8.active,
+header .accordion-header #Arrow9.active,
+header .accordion-header #Arrow10.active,
+header .accordion-header #Arrow11.active,
+header .accordion-header #Arrow12.active,
+header .accordion-header #Arrow13.active,
+header .accordion-header #Arrow14.active,
+header .accordion-header #Arrow15.active,
+header .accordion-header #Arrow16.active,
+header .accordion-header #Arrow17.active,
+header .accordion-header #Arrow18.active,
+header .accordion-header #Arrow19.active,
+header .accordion-header #Arrow20.active,
+header .accordion-header #Arrow21.active,
+header .accordion-header #Arrow22.active,
+header .accordion-header #Arrow23.active,
+header .accordion-header #Arrow24.active,
+header .accordion-header #Arrow25.active,
+header .accordion-header #Arrow26.active{
+  transform: rotate(90deg);
+  transition: all 0.3s;
+}
+header aside .left{
+  height: 100vh;
+  overflow: auto;
+}
+header section{
+  margin-left: 15%;
+  padding-top: 5%;
+}
+header section .dashboard, main, article{
+  padding-left: 2%;
+}
+header section main{
+  width: 100%;
+  overflow: auto;
+}
+header section figure .col-lg-6{
+  overflow-x: auto;
+}
+header figure, footer{
+  background-color: #f5f7fa;
+}
+main{
+  margin-top: 2%;
+}
+main input{
+  outline: none;
+}
+main table td .info .letter{
+  background-color: #e5edff;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  text-align: center;
+  padding: 2px 0px;
+}
+main table td .badge{
+  background-color: var(--badge-bgcolor);
+  border: 1px solid var(--badge-bordercolor);
+}
+
+
+@media(max-width: 480px){
+  header aside{
+    width: 80%;
+    padding-top: 5%;
+    margin-left: -80%;
+    transition: all 0.5s;
+  }
+  header section{
+    margin: 0%;
+  }
+  header aside.left{
+    margin-left: 0%;
+  }
+}
